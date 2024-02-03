@@ -47,12 +47,51 @@ def guardar():
         else:
              print("Dato no Valido")
     infoCamp["Estado"] = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n"for i in estados]))
+    
     camper.append(infoCamp)
     with open("modulo/storage/camper.json", "w") as f:
         data = json.dumps(camper, indent=4)
         f.write(data)
         f.close()
+    menu()
     return "Guardado Exitoso"
+
+
+def actualizar():
+    bandera=True
+    while(bandera):
+        system("clear")
+        code = int(input("Ingrese el código del camper\n"))
+        print(f"""
+Codigo: {code}
+Nombre: {camper[code].get('Nombre')}
+Apellido: {camper[code].get('Apellido')}
+Edad: {camper[code].get('Edad')}
+Id: {camper[code].get('Id')}
+Direccion: {camper[code].get('Direccion')}
+Acudiente: {camper[code].get('Acudiente')}
+Telefono: {camper[code].get('Telefono')}
+              """)
+        print("¿Este es el camper que deseas actualizar?")
+        print("1. Sí")
+        print("2. No")
+        print("3. Salir")
+        bandera=True
+        while(bandera):
+            opc = int(input())
+            if opc == 1:
+                system("clear")
+                camper.pop(code)
+                with open("modulo/storage/camper.json", "w") as f:
+                    data = json.dumps(camper, indent=4)
+                    f.write(data)
+                    f.close()
+                bandera=False
+            if opc == 2:
+                actualizar()
+            if opc == 3:
+                bandera = False
+
 
 def buscar():
     system("clear")
@@ -69,3 +108,30 @@ Teléfono: {val.get('Telefono')}
 Estado: {val.get('Estado')}
               """)
     return "Camper cargado"
+
+
+
+def eliminar():
+    print()
+
+def menu():
+    system("clear")
+    print("Menu Camper")
+    print("\t1. Registro de camper")
+    print("\t2. Buscar Camper")
+    print("\t3. Actualizar Camper")
+    print("\t4. Eliminar Camper")
+
+    
+    bandera = True
+    while (bandera):
+        opc = int(input())
+        match(opc):
+            case 1:
+                guardar()
+            case 2:
+                buscar()
+            case 3:
+                actualizar()
+            case 4:
+                eliminar()
