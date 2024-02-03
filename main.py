@@ -6,7 +6,7 @@ import modulo.notas as mNotas
 
 def menu():
     print("Seguimiento Academico de Campers")
-    print("\t1. Registro de camper")
+    print("\t1. Modulo camper")
     print("\t2. Registro de pruebas")
     print("\t3. Registro de areas de entrenamiento")
     print("\t4. Crear rutas de entrenamiento")
@@ -17,7 +17,7 @@ while (bandera):
     opc = int(input())
     match(opc):
         case 1:
-            mCamper.guardar()
+            mCamper.menu()
         case 2:
             mNotas.guardar()
 
