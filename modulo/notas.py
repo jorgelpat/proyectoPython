@@ -1,6 +1,7 @@
 from os import system
 
 def guardar():
+    system("clear")
     infoNota = {
         "Teorica":"",
         "Practica":"",
