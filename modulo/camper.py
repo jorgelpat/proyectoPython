@@ -48,8 +48,8 @@ def guardar():
              print("Dato no Valido")
     infoCamp["Estado"] = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n"for i in estados]))
     camper.append(infoCamp)
-    # with open("modulo/storage/camper.json", "w") as f:
-    #     data = json.dumps(camper, ident=4)
-    #     f.write(data)
-    #     f.close()
-    # return "Guardado Exitoso"
+    with open("modulo/storage/camper.json", "w") as f:
+        data = json.dumps(camper, indent=4)
+        f.write(data)
+        f.close()
+    return "Guardado Exitoso"
