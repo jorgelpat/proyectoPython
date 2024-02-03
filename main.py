@@ -1,6 +1,7 @@
 import json
 from os import system
 import modulo.camper as mCamper
+import modulo.notas as mNotas
 
 
 def menu():
@@ -17,4 +18,6 @@ while (bandera):
     match(opc):
         case 1:
             mCamper.guardar()
-            
+        case 2:
+            mNotas.guardar()
+
