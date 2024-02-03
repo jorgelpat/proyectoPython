@@ -53,3 +53,19 @@ def guardar():
         f.write(data)
         f.close()
     return "Guardado Exitoso"
+
+def buscar():
+    system("clear")
+    for i, val in enumerate(camper):
+        print(f"""
+Código: {i}
+Nombre: {val.get('Nombre')}      
+Apellido: {val.get('Apellido')}
+Edad: {val.get('Edad')}
+Id: {val.get('Id')}
+Direccion: {val.get('Direccion')}
+Acudiente: {val.get('Acudiente')}
+Teléfono: {val.get('Telefono')}
+Estado: {val.get('Estado')}
+              """)
+    return "Camper cargado"
