@@ -2,6 +2,27 @@ import json
 from os import system
 import modulo.camper as mCamper
 import modulo.notas as mNotas
+import modulo.validate as valid
+
+
+def menuCamper():
+    print("\t1. Registro de camper")
+    print("\t2. Buscar Camper")
+    print("\t3. Actualizar Camper")
+    print("\t4. Eliminar Camper")
+
+    bandera1 = True
+    while (bandera1):
+        opc = int(input())
+        match(opc):
+            case 1:
+                mCamper.guardar()
+                bandera1 = False
+            case 2: mCamper.buscar()
+            case 3: mCamper.actualizar()
+            case 4: mCamper.eliminar()
+            case _: valid.noValid(opc)
+        
 
 
 def menu():
@@ -17,7 +38,7 @@ while (bandera):
     opc = int(input())
     match(opc):
         case 1:
-            mCamper.menu()
+            menuCamper()
         case 2:
             mNotas.guardar()
 
