@@ -13,7 +13,11 @@ def guardar():
         "Direccion": "",
         "Acudiente": "",
         "Telefono": "",
-        "Estado": ""
+        "Estado": "",
+        "Teorica": "",
+        "Practica": "",
+        "Trabajos": ""
+
     }
     infoCamp["Nombre"] = input("Ingrese nombre(s) del camper\n")
     infoCamp["Apellido"] = input("Ingrese apellido(s) del camper\n")
@@ -47,8 +51,10 @@ def guardar():
         else:
              print("Dato no Valido")
     infoCamp["Estado"] = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
+
     with open("modulo/storage/camper.json") as f:
         camper = json.load(f)
+        
     camper.append(infoCamp)
     with open("modulo/storage/camper.json", "w") as f:
         data = json.dumps(camper, indent=4)
