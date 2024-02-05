@@ -2,8 +2,6 @@ from os import system
 import json
 from .data import estados, camper
 
-
-
 def guardar():
     system("clear")
     infoNota = {

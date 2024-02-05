@@ -14,9 +14,6 @@ def guardar():
         "Acudiente": "",
         "Telefono": "",
         "Estado": "",
-        "Teorica": "",
-        "Practica": "",
-        "Trabajos": ""
 
     }
     infoCamp["Nombre"] = input("Ingrese nombre(s) del camper\n")
