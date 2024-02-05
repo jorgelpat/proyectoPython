@@ -57,6 +57,7 @@ def guardar():
         data = json.dumps(camper, indent=4)
         f.write(data)
         f.close()
+        system("clear")
     return "Guardado Exitoso"
 
 
@@ -140,18 +141,24 @@ Telefono: {camper[code].get('Telefono')}
 
 def buscar():
     system("clear")
-    for i, val in enumerate(camper):
-        print(f"""
-Código: {i}
-Nombre: {val.get('Nombre')}      
-Apellido: {val.get('Apellido')}
-Edad: {val.get('Edad')}
-Id: {val.get('Id')}
-Direccion: {val.get('Direccion')}
-Acudiente: {val.get('Acudiente')}
-Teléfono: {val.get('Telefono')}
-Estado: {val.get('Estado')}
-              """)
+#     for i, val in enumerate(camper):
+#         print(f"""
+# Código: {i}
+# Nombre: {val.get('Nombre')}      
+# Apellido: {val.get('Apellido')}
+# Edad: {val.get('Edad')}
+# Id: {val.get('Id')}
+# Direccion: {val.get('Direccion')}
+# Acudiente: {val.get('Acudiente')}
+# Teléfono: {val.get('Telefono')}
+# Estado: {val.get('Estado')}
+#               """)
+    id = input("Ingrese numero de identificacion del camper:\n")
+    with open("modulo/storage/camper.json") as f:
+        data=json.loads(f.read())
+        for datos in data:
+            if id == datos["Id"]:
+                print(datos)
     return "Camper cargado"
 
 

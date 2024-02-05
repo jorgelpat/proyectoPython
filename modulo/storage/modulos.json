@@ -1,0 +1,11 @@
+[
+    {
+        "codigo": "159",
+        "nombre_modulo": "Fundamentos",
+        "Temario":[
+            "Lenguaje natural",
+            "diagrama de flujos"
+        ],
+        "prioridad": "principal"
+    }
+]
