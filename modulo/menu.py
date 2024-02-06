@@ -1,18 +1,8 @@
+from os import system
 import modulo.camper as mCamper
 import modulo.validate as valid
 import modulo.notas as mNotas
 
-def menuPrincipal():
-    print("Seguimiento Academico de Campers")
-    print("\t1. Modulo camper")
-    print("\t2. Registro de pruebas")
-    print("\t3. Registro de areas de entrenamiento")
-    print("\t4. Crear rutas de entrenamiento")
-    print("\t5. Ver informacion Camper")
-    opc = int(input())
-    match(opc):
-        case 1: menuCamper()
-        case 2: mNotas.guardar()
 
 
 def menuCamper():
@@ -32,5 +22,5 @@ def menuCamper():
             case 2: mCamper.buscar()
             case 3: mCamper.actualizar()
             case 4: mCamper.eliminar()
-            case 5: menuPrincipal()
+            case 5: bandera1=False
             case _: valid.noValid(opc)
