@@ -55,11 +55,27 @@ def guardar():
 
 def buscar():
     id = int(input("Indique la identificacion del camper\n"))
-    with open("modulo/storage/notas.json") as f:
+    with open("modulo/storage/notas.json","r") as f:
         data = json.loads(f.read())
+        f.close()
         for datos in data:
             if id==datos["Id"]:
                 print(datos)
+    print(datos)
+    with open("modulo/storage/camper.json","r") as f1:
+        data1 = json.loads(f1.read())
+        f1.close()
+        for datos1 in data1:
+            if id==datos1["Id"]:
+                print(datos1)
+        print(f"""
+Nombre: {datos1.get('Nombre')}      
+Apellido: {datos1.get('Apellido')}
+Teorica: {datos.get('Teorica')}
+Practica: {datos.get('Practica')}
+Trabajos: {datos.get('Trabajos')}                    
+            """)
+                
     return "Notas Cargadas"
 
 # def actualizar():
