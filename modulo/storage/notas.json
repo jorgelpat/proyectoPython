@@ -34,5 +34,11 @@
         "Teorica": "25",
         "Practica": "35",
         "Trabajos": "40"
+    },
+    {
+        "Id": "1236564",
+        "Teorica": "85",
+        "Practica": "75",
+        "Trabajos": "80"
     }
 ]
