@@ -54,10 +54,14 @@ def guardar():
 
 
 def buscar():
-    id = int(input("Indique la identificacion del camper"))
+    id = int(input("Indique la identificacion del camper\n"))
     with open("modulo/storage/notas.json") as f:
         data = json.loads(f.read())
         for datos in data:
             if id==datos["Id"]:
                 print(datos)
     return "Notas Cargadas"
+
+# def actualizar():
+#     id = int(input("Identificación del camper:\n"))
+#     with open("modulo/storage/notas.json") as f:
