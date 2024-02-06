@@ -3,7 +3,7 @@ from os import system
 import modulo.camper as mCamper
 import modulo.notas as mNotas
 import modulo.validate as valid
-import modulo.menu as menus
+import modulo.menu as menu
 
 def menuPrincipal():
     #system("clear")
@@ -13,9 +13,10 @@ def menuPrincipal():
     print("\t3. Registro de areas de entrenamiento")
     print("\t4. Crear rutas de entrenamiento")
     print("\t5. Ver informacion Camper")
+    print("\t6. Filtrar por personas aprobadas")
     opc = int(input())
     match(opc):
-        case 1: menus.menuCamper()
+        case 1: menu.menuCamper()
         case 2: 
             #system("clear")
             print("\t1. Ver notas")
@@ -27,6 +28,8 @@ def menuPrincipal():
                 case 1: mNotas.buscar()
                 case 2: mNotas.guardar()
                 case 4: menuPrincipal()
+        case 6:
+            mNotas.aprobados()
 
 
 bandera = True
