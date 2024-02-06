@@ -1,5 +1,6 @@
 import json
 from os import system
+import modulo.menu as menu
 from .data import camper, estados
 
 
@@ -205,9 +206,24 @@ def buscar():
     id = input("Ingrese numero de identificacion del camper:\n")
     with open("modulo/storage/camper.json") as f:
         data=json.loads(f.read())
+        f.close()
         for datos in data:
             if id == datos["Id"]:
-                print(datos)
+                print(f"""
+Nombre: {datos.get('Nombre')}      
+Apellido: {datos.get('Apellido')}
+Edad: {datos.get('Edad')}
+Id: {datos.get('Id')}
+Direccion: {datos.get('Direccion')}
+Acudiente: {datos.get('Acudiente')}
+Teléfono: {datos.get('Telefono')}
+Estado: {datos.get('Estado')}                          
+                      """)
+    print("\t1. Salir\n")
+    opc = int(input())
+    match(opc):
+        case 1: menu.menuCamper()
+        
     return "Camper cargado"
 
 
