@@ -5,7 +5,7 @@ from .data import camper, estados
 
 
 def guardar():
-    system("clear")
+    #system("clear")
     infoCamp = {
         "Nombre": "",
         "Apellido": "",
@@ -58,7 +58,7 @@ def guardar():
         data = json.dumps(camper, indent=4)
         f.write(data)
         f.close()
-        system("clear")
+        #system("clear")
     return "Guardado Exitoso"
 
 
@@ -67,7 +67,7 @@ def actualizar():
     while(bandera):
         system("clear")
         id = input("Ingrese identificacion del camper\n")
-        with open("modulo/storage/camper.json") as f:
+        with open("modulo/storage/camper.json", "r") as f:
             data = json.loads(f.read())
             for datos in data:
                 if id==datos["Id"]:
@@ -103,14 +103,20 @@ def actualizar():
                         else:
                             print("Dato no Valido")
                     datos["Estado"] = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
-                    with open("modulo/storage/camper.json","w") as f:
-                        data = json.dumps(camper, indent=4)
-                        f.write(data)
-                        f.close()
                 else:
                     print("no hay ningun camper registrado con esa identificacion")
+        with open("modulo/storage/camper.json","w") as f:
+            data = json.dumps(data, indent=4)
+            f.write(data)
+            f.close()            
+        print("Operacion Terminada")
+        print("\t1. Salir")
+        print("\t2. Seguir editando")
+            
+
+            
                     
-    return "Edicion Terminada" #No terminado, Error en la busqueda del camper, se eliminan todos los doc guardados
+    return "Edicion Terminada" #No terminado, Error en la salida, no da opcion de salir
 
 
 
@@ -190,45 +196,49 @@ def actualizar():
 
 
 def buscar():
-    system("clear")
-#     for i, val in enumerate(camper):
-#         print(f"""
-# Código: {i}
-# Nombre: {val.get('Nombre')}      
-# Apellido: {val.get('Apellido')}
-# Edad: {val.get('Edad')}
-# Id: {val.get('Id')}
-# Direccion: {val.get('Direccion')}
-# Acudiente: {val.get('Acudiente')}
-# Teléfono: {val.get('Telefono')}
-# Estado: {val.get('Estado')}
-#               """)
-    id = input("Ingrese numero de identificacion del camper:\n")
-    with open("modulo/storage/camper.json") as f:
-        data=json.loads(f.read())
-        f.close()
-        for datos in data:
-            if id == datos["Id"]:
-                print(f"""
-Nombre: {datos.get('Nombre')}      
-Apellido: {datos.get('Apellido')}
-Edad: {datos.get('Edad')}
-Id: {datos.get('Id')}
-Direccion: {datos.get('Direccion')}
-Acudiente: {datos.get('Acudiente')}
-Teléfono: {datos.get('Telefono')}
-Estado: {datos.get('Estado')}                          
-                      """)
-    print("\t1. Salir\n")
-    opc = int(input())
-    match(opc):
-        case 1: menu.menuCamper()
-        
+    bandera = True
+    while (bandera):
+        system("clear")
+    #     for i, val in enumerate(camper):
+    #         print(f"""
+    # Código: {i}
+    # Nombre: {val.get('Nombre')}      
+    # Apellido: {val.get('Apellido')}
+    # Edad: {val.get('Edad')}
+    # Id: {val.get('Id')}
+    # Direccion: {val.get('Direccion')}
+    # Acudiente: {val.get('Acudiente')}
+    # Teléfono: {val.get('Telefono')}
+    # Estado: {val.get('Estado')}
+    #               """)
+        id = input("Ingrese numero de identificacion del camper:\n")
+        with open("modulo/storage/camper.json") as f:
+            data=json.loads(f.read())
+            f.close()
+            for datos in data:
+                if id == datos["Id"]:
+                    print(f"""
+    Nombre: {datos.get('Nombre')}      
+    Apellido: {datos.get('Apellido')}
+    Edad: {datos.get('Edad')}
+    Id: {datos.get('Id')}
+    Direccion: {datos.get('Direccion')}
+    Acudiente: {datos.get('Acudiente')}
+    Teléfono: {datos.get('Telefono')}
+    Estado: {datos.get('Estado')}                          
+                        """)
+        print("\t1. Salir\n")
+        opc = int(input())
+        if opc == 1:
+            menu()
+            #No es posible salir de la funcion
+            #Error al cargar la funcion
+
     return "Camper cargado"
 
 
 
-def eliminar():
+# def eliminar():
     # bandera=True
     # while (bandera):
     #     system("clear")
@@ -247,41 +257,43 @@ def eliminar():
 # Acudiente: {camper[code].get('Acudiente')}
 # Telefono: {camper[code].get('Telefono')}              
 #               """)
-        print("¿Este es el camper que deseas eliminar?")
-        print("1. Si")
-        print("2. No")
-        print("3. Salir")
-        opc = int(input())
-        if opc==1:
-            camper.pop(code)
-            with open("modulo/storage/camper.json", "w") as f:
-                data = json.dumps(camper,indent=4)
-                f.write(code)
-                f.close()
-            bandera = False
-        if opc==2:
-            eliminar()
-        if opc==3:
-            bandera = False
+        # print("¿Este es el camper que deseas eliminar?")
+        # print("1. Si")
+        # print("2. No")
+        # print("3. Salir")
+        # opc = int(input())
+        # if opc==1:
+        #     camper.pop(code)
+        #     with open("modulo/storage/camper.json", "w") as f:
+        #         data = json.dumps(camper,indent=4)
+        #         f.write(code)
+        #         f.close()
+        #     bandera = False
+        # if opc==2:
+        #     eliminar()
+        # if opc==3:
+        #     bandera = False
 
 def menu():
-    system("clear")
-    print("Menu Camper")
-    print("\t1. Registro de camper")
-    print("\t2. Buscar Camper")
-    print("\t3. Actualizar Camper")
-    print("\t4. Eliminar Camper")
+    menu.menuCamper()
+    # system("clear")
+    # print("Menu Camper")
+    # print("\t1. Registro de camper")
+    # print("\t2. Buscar Camper")
+    # print("\t3. Actualizar Camper")
+    # print("\t4. Eliminar Camper")
+    # print("\t5. Salir")
 
     
-    bandera = True
-    while (bandera):
-        opc = int(input())
-        match(opc):
-            case 1:
-                guardar()
-            case 2:
-                buscar()
-            case 3:
-                actualizar()
-            case 4:
-                eliminar()
+    # bandera = True
+    # while (bandera):
+    #     opc = int(input())
+    #     match(opc):
+    #         case 1:
+    #             guardar()
+    #         case 2:
+    #             buscar()
+    #         case 3:
+    #             actualizar()
+    #         # case 4:
+    #         #     eliminar()
