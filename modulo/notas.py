@@ -69,11 +69,15 @@ def buscar():
             if id==datos1["Id"]:
                 print(datos1)
         print(f"""
+______________________________
+______________________________
 Nombre: {datos1.get('Nombre')}      
 Apellido: {datos1.get('Apellido')}
 Teorica: {datos.get('Teorica')}
 Practica: {datos.get('Practica')}
-Trabajos: {datos.get('Trabajos')}                    
+Trabajos: {datos.get('Trabajos')}  
+______________________________
+______________________________                  
             """)
                 
     return "Notas Cargadas"
@@ -81,3 +85,30 @@ Trabajos: {datos.get('Trabajos')}
 # def actualizar():
 #     id = int(input("Identificación del camper:\n"))
 #     with open("modulo/storage/notas.json") as f:
+
+
+def aprobados():
+    with open("modulo/storage/camper.json") as f:
+        listaCamper =json.loads(f.read())
+        f.close()
+    with open("modulo/storage/notas.json") as f:
+        data = json.loads(f.read())
+        f.close()
+        for datos in data:
+            if (int(datos["Teorica"])+int(datos["Practica"]))/2 >= 60:
+                aprobados = datos
+                id=aprobados["Id"]
+                #print(aprobados)
+                for camper in listaCamper:
+                    if id==camper["Id"]:
+                        print(f"""
+Id: {camper.get('Id')}
+Nombre: {camper.get('Nombre')}
+Apellido: {camper.get('Apellido')}
+Teorica: {aprobados.get('Teorica')}
+Practica: {aprobados.get('Practica')}
+Trabajos: {aprobados.get('Trabajos')}
+                              """)
+    return "Lista de aprobados"
+    
+            
