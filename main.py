@@ -13,7 +13,7 @@ def menuPrincipal():
     print("\t3. Registro de areas de entrenamiento")
     print("\t4. Crear rutas de entrenamiento")
     print("\t5. Ver informacion Camper")
-    print("\t6. Filtrar por personas aprobadas")
+    print("\t6. Filtracion de Campers")
     opc = int(input())
     match(opc):
         case 1: menu.menuCamper()
@@ -29,6 +29,8 @@ def menuPrincipal():
                 case 2: mNotas.guardar()
                 case 4: menuPrincipal()
         case 6:
+            print("\t1. Campers Aprobados")
+            print("\t2. Camper no Aprobados")
             mNotas.aprobados()
 
 
