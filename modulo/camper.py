@@ -112,10 +112,7 @@ def actualizar():
         print("Operacion Terminada")
         print("\t1. Salir")
         print("\t2. Seguir editando")
-            
-
-            
-                    
+        
     return "Edicion Terminada" #No terminado, Error en la salida, no da opcion de salir
 
 
