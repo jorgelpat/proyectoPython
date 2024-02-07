@@ -12,7 +12,7 @@ def menuPrincipal():
     print("\t1. Modulo camper")
     print("\t2. Modulo notas")
     print("\t3. Modulo trainer")
-    print("\t4. Crear rutas de entrenamiento")
+    print("\t4. Probar notas trainer")
     print("\t5. Ver informacion Camper")
     print("\t6. Listas de Campers")
     opc = int(input())
@@ -27,9 +27,10 @@ def menuPrincipal():
             opc = int(input())
             match(opc):
                 case 1: mNotas.buscar()
-                case 2: mNotas.guardar()
+                case 2: mNotas.guardarNotasModulo()
                 case 4: menuPrincipal()
         case 3: mTrainer.menuTrainer()
+        case 4: mNotas.preNotas()
         case 6:
             print("\t1. Campers Aprobados")
             print("\t2. Campers con bajo rendimiento")

@@ -1,0 +1,17 @@
+[
+    {
+        "Id": "149985",
+        "Teorica": "60",
+        "Practica": "61"
+    },
+    {
+        "Id": "149985",
+        "Teorica": "60",
+        "Practica": "61"
+    },
+    {
+        "Id": "149985",
+        "Teorica": 60,
+        "Practica": 61
+    }
+]

@@ -2,7 +2,68 @@ from os import system
 import json
 from .data import notas, camper
 
-def guardar():
+def preNotas():
+    notas={
+        "Id": "",
+        "Teorica": "",
+        "Practica": ""
+    }
+    bandera=True
+    while(bandera):
+        id=input("Identificacion del camper:\n")
+        if id.isnumeric():
+            notas["Id"]=id
+            bandera=False
+        else:
+            print("Dato no valido")
+    bandera=True
+    while(bandera):
+        teorica=input("Nota teorica: ")
+        if teorica.isnumeric():
+            notas["Teorica"]=int(teorica) #Se cambio aqui a int
+            bandera=False
+        else:
+            print("Dato no valido")
+    bandera=True
+    while(bandera):
+        practica=input("Nota practica: ")
+        if practica.isnumeric():
+            notas["Practica"]=int(practica) #Se cambio aqui a int
+            bandera=False
+        else:
+            print("Dato no valido")
+    with open("modulo/storage/preNotas.json") as f:
+        campers=json.loads(f.read())
+        campers.append(notas)
+    with open("modulo/storage/preNotas.json","w") as f:
+        data=json.dumps(campers, indent=4)
+        f.write(data)
+        f.close()
+    for datos in data:
+        # numer1=int(datos["Teorica"])
+        # numer2=int(datos["Practica"])
+        if (datos["Teorica"]+datos["Practica"])/2 > 60:#Corregir aqui
+            with open("modulo/storage/camper.json") as f:
+                campers1=json.loads(f.read())
+                f.close()
+                for camper1 in campers1:
+                    if id==camper1["Id"]:
+                        with open("modulo/storage/camper.json","w") as f:
+                            data1=json.dumps(f.write(data1))
+                            f.close()
+                            data1["Estado"]="Inscrito"
+
+
+    return "Datos cargados" #Procurar hacer una funcion que registre notas y si es preinscrito solo pedirle 2
+#si es incsrito, pedirle 3 y guardarlas y si es aprobado guardarlas en otro Json
+
+
+
+
+
+
+
+def guardarNotasModulo():
     system("clear")
     infoNota = {
         "Id":"",
@@ -133,3 +194,4 @@ Teorica: {noAprobados.get('Teorica')}
 Practica: {noAprobados.get('Practica')}
 Trabajos: {noAprobados.get('Trabajos')}
                               """)
+    return "Lista de no aprobados"

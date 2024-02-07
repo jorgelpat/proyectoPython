@@ -49,6 +49,7 @@ def guardar():
         else:
              print("Dato no Valido")
     #infoCamp["Estado"] = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
+    infoCamp["Estado"]="Preinscrito"
 
     with open("modulo/storage/camper.json") as f:
         camper = json.load(f)
