@@ -32,7 +32,7 @@ def menuPrincipal():
         case 3: mTrainer.menuTrainer()
         case 6:
             print("\t1. Campers Aprobados")
-            print("\t2. Camper no Aprobados")
+            print("\t2. Campers con bajo rendimiento")
             print("\t3. Lista de Inscritos")
             print("\t4. Lista de Trainers")
             opc= int(input())
@@ -40,7 +40,7 @@ def menuPrincipal():
                 case 1:
                     mNotas.aprobados()
                 case 2:
-                    mNotas.noAprobados()
+                    mNotas.bajoRiesgo()
                 case 3:
                     mCamper.inscritos()
                 case 4:

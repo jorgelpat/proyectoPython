@@ -111,7 +111,7 @@ Trabajos: {aprobados.get('Trabajos')}
                               """)
     return "Lista de aprobados"
     
-def noAprobados():
+def bajoRiesgo():
     with open("modulo/storage/camper.json") as f:
         listaCamper =json.loads(f.read())
         f.close()
