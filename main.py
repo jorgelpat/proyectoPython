@@ -31,7 +31,12 @@ def menuPrincipal():
         case 6:
             print("\t1. Campers Aprobados")
             print("\t2. Camper no Aprobados")
-            mNotas.aprobados()
+            opc= int(input())
+            match(opc):
+                case 1:
+                    mNotas.aprobados()
+                case 2:
+                    mNotas.noAprobados()
 
 
 bandera = True

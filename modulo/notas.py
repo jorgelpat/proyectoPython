@@ -95,7 +95,7 @@ def aprobados():
         data = json.loads(f.read())
         f.close()
         for datos in data:
-            if (int(datos["Teorica"])+int(datos["Practica"]))/2 >= 60:
+            if ((int(datos["Teorica"])*0.3)+(int(datos["Practica"]))*0.6)+(int(datos["Trabajos"])*0.1) >= 60:
                 aprobados = datos
                 id=aprobados["Id"]
                 #print(aprobados)
@@ -111,4 +111,25 @@ Trabajos: {aprobados.get('Trabajos')}
                               """)
     return "Lista de aprobados"
     
-            
+def noAprobados():
+    with open("modulo/storage/camper.json") as f:
+        listaCamper =json.loads(f.read())
+        f.close()
+    with open("modulo/storage/notas.json") as f:
+        data = json.loads(f.read())
+        f.close()
+        for datos in data:
+            if ((int(datos["Teorica"])*0.3)+(int(datos["Practica"]))*0.6)+(int(datos["Trabajos"])*0.1) < 60:
+                noAprobados = datos
+                id=noAprobados["Id"]
+                #print(aprobados)
+                for camper in listaCamper:
+                    if id==camper["Id"]:
+                        print(f"""
+Id: {camper.get('Id')}
+Nombre: {camper.get('Nombre')}
+Apellido: {camper.get('Apellido')}
+Teorica: {noAprobados.get('Teorica')}
+Practica: {noAprobados.get('Practica')}
+Trabajos: {noAprobados.get('Trabajos')}
+                              """)
