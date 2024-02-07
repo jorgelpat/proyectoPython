@@ -1,13 +1,14 @@
 import json
 from os import system
 import modulo.menu as menu
-from .data import camper, estados, trainer
+from .data import camper, estados, trainer, horarios
 
 def guardar():
     infoTrainer = {
         "Nombre": "",
         "Apellido": "",
-        "Id": ""
+        "Id": "",
+        "Horario": ""
     }
     infoTrainer["Nombre"]=input("Nombre del trainer:\n")
     infoTrainer["Apellido"]=input("Apellido del trainer:\n")
@@ -17,6 +18,7 @@ def guardar():
         if id.isnumeric():
             infoTrainer["Id"]=id
             bandera = False
+    infoTrainer["Horario"]=input("Elija horario del trainer\n\t"+"\t".join([f"{horarios.index(i)+1}. {i}\n" for i in horarios]))
     with open("modulo/storage/trainer.json") as f:
         trainer=json.loads(f.read())
         f.close()
