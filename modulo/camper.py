@@ -112,7 +112,7 @@ def actualizar():
         print("Operacion Terminada")
         print("\t1. Salir")
         print("\t2. Seguir editando")
-        
+
     return "Edicion Terminada" #No terminado, Error en la salida, no da opcion de salir
 
 
@@ -294,3 +294,19 @@ def menu():
     #             actualizar()
     #         # case 4:
     #         #     eliminar()
+
+def inscritos():
+    print("******CAMPER INSCRITOS******")
+    with open("modulo/storage/camper.json") as f:
+        campers = json.loads(f.read())
+        f.close()
+        for camper in campers:
+            if camper["Estado"]=="2":
+                print(f"""
+****************************
+Nombre: {camper.get("Nombre")}
+Apellido: {camper.get("Apellido")}
+Id: {camper.get("Id")}    
+****************************                  
+                      """)
+    return "Camper Cargado"

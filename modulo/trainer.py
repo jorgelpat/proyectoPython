@@ -70,6 +70,20 @@ Id: {trainer.get("Id")}
             
         
 
+def listaTrainers():
+    print("******TRAINERS******")
+    with open("modulo/storage/trainer.json") as f:
+        trainers=json.loads(f.read())
+        f.close()
+        for trainer in trainers:
+            print(f"""
+********************    
+Nombre: {trainer.get("Nombre")}
+Apellido: {trainer.get("nombre")}
+Id: {trainer.get("Id")}
+********************
+                  """)
+    return "Trainers Cargados"
 
 
 

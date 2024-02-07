@@ -14,7 +14,7 @@ def menuPrincipal():
     print("\t3. Modulo trainer")
     print("\t4. Crear rutas de entrenamiento")
     print("\t5. Ver informacion Camper")
-    print("\t6. Filtracion de Campers")
+    print("\t6. Listas de Campers")
     opc = int(input())
     match(opc):
         case 1: menu.menuCamper()
@@ -33,12 +33,18 @@ def menuPrincipal():
         case 6:
             print("\t1. Campers Aprobados")
             print("\t2. Camper no Aprobados")
+            print("\t3. Lista de Inscritos")
+            print("\t4. Lista de Trainers")
             opc= int(input())
             match(opc):
                 case 1:
                     mNotas.aprobados()
                 case 2:
                     mNotas.noAprobados()
+                case 3:
+                    mCamper.inscritos()
+                case 4:
+                    mTrainer.listaTrainers()
 
 
 bandera = True
