@@ -79,7 +79,7 @@ def listaTrainers():
             print(f"""
 ********************    
 Nombre: {trainer.get("Nombre")}
-Apellido: {trainer.get("nombre")}
+Apellido: {trainer.get("Apellido")}
 Id: {trainer.get("Id")}
 ********************
                   """)
