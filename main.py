@@ -5,6 +5,7 @@ import modulo.trainer as mTrainer
 import modulo.notas as mNotas
 import modulo.validate as valid
 import modulo.menu as menu
+import modulo.rutas as mRuta
 
 def menuPrincipal():
     #system("clear")
@@ -15,6 +16,7 @@ def menuPrincipal():
     print("\t4. Probar notas trainer")
     print("\t5. Ver informacion Camper")
     print("\t6. Listas de Campers")
+    print("\t7. Rutas")
     opc = int(input())
     match(opc):
         case 1: menu.menuCamper()
@@ -46,6 +48,8 @@ def menuPrincipal():
                     mCamper.inscritos()
                 case 4:
                     mTrainer.listaTrainers()
+                    
+        case 7: mRuta.enrutamiento()
 
 
 bandera = True
