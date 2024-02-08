@@ -2,6 +2,11 @@ from os import system
 import json
 from .data import notas, camper
 
+
+
+
+
+
 def preNotas():
     notas={
         "Id": "",
@@ -20,7 +25,7 @@ def preNotas():
     while(bandera):
         teorica=input("Nota teorica: ")
         if teorica.isnumeric():
-            notas["Teorica"]=int(teorica) #Se cambio aqui a int
+            notas["Teorica"]= teorica 
             bandera=False
         else:
             print("Dato no valido")
@@ -28,7 +33,7 @@ def preNotas():
     while(bandera):
         practica=input("Nota practica: ")
         if practica.isnumeric():
-            notas["Practica"]=int(practica) #Se cambio aqui a int
+            notas["Practica"]=practica 
             bandera=False
         else:
             print("Dato no valido")
@@ -39,19 +44,19 @@ def preNotas():
         data=json.dumps(campers, indent=4)
         f.write(data)
         f.close()
-    for datos in data:
+    # for datos in data:
         # numer1=int(datos["Teorica"])
         # numer2=int(datos["Practica"])
-        if (datos["Teorica"]+datos["Practica"])/2 > 60:#Corregir aqui
-            with open("modulo/storage/camper.json") as f:
-                campers1=json.loads(f.read())
-                f.close()
-                for camper1 in campers1:
-                    if id==camper1["Id"]:
-                        with open("modulo/storage/camper.json","w") as f:
-                            data1=json.dumps(f.write(data1))
-                            f.close()
-                            data1["Estado"]="Inscrito"
+        # if (datos["Teorica"]+datos["Practica"])/2 > 60:#Corregir aqui
+            # with open("modulo/storage/camper.json") as f:
+            #     campers1=json.loads(f.read())
+            #     f.close()
+            #     for camper1 in campers1:
+            #         if id==camper1["Id"]:
+            #             with open("modulo/storage/camper.json","w") as f:
+            #                 data1=json.dumps(f.write(data1))
+            #                 f.close()
+            #                 data1["Estado"]="Inscrito"
 
 
     return "Datos cargados" #Procurar hacer una funcion que registre notas y si es preinscrito solo pedirle 2
