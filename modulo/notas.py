@@ -74,6 +74,7 @@ def guardarNotasModulo():
             for camper in campers:
                 if id==camper["Id"] and camper["Estado"]=="Aprobado":
                     infoNota = {
+            "Modulo":"",#Se crea para generar un contador
             "Id":"",
             "Teorica":"",#Poner un Contador para identificar el módulo
             "Practica":"",
