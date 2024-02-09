@@ -75,7 +75,7 @@ def guardarNotasModulo():
                 if id==camper["Id"] and camper["Estado"]=="Aprobado":
                     infoNota = {
             "Id":"",
-            "Teorica":"",
+            "Teorica":"",#Poner un Contador para identificar el módulo
             "Practica":"",
             "Trabajos":""
         }
@@ -143,6 +143,8 @@ def guardarNotasModulo():
                         system("clear")
         bandera=False
     return "Guardado"
+
+
 
     # #system("clear")
     # infoNota = {
