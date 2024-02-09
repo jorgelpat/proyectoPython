@@ -1,4 +1,5 @@
-estados = ["Preseleccion","Inscrito","Aprobado","En Riesgo","Filtrado"]
+estados = ["Preseleccion","Inscrito","Aprobado"]
+riesgo = ["Normal","En Riesgo","Filtrado"]
 rutas = ["NodeJS","Java","Netcore"]
 camper = []
 trainer = []

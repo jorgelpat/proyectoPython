@@ -27,16 +27,13 @@ def preNotas():
         if teorica.isnumeric():
             notas["Teorica"]= teorica 
             bandera=False
-        else:
-            print("Dato no valido")
     bandera=True
     while(bandera):
         practica=input("Nota practica: ")
         if practica.isnumeric():
             notas["Practica"]=practica 
             bandera=False
-        else:
-            print("Dato no valido")
+
     with open("modulo/storage/preNotas.json") as f:
         campers=json.loads(f.read())
         campers.append(notas)
@@ -69,54 +66,132 @@ def preNotas():
 
 
 def guardarNotasModulo():
-    system("clear")
-    infoNota = {
-        "Id":"",
-        "Teorica":"",
-        "Practica":"",
-        "Trabajos":""
-    }
     bandera=True
     while (bandera):
-        id = input("Escriba el documento del camper:")
-        if id.isnumeric():
-            infoNota["Id"] = id
-            bandera=False
-        else:
-            print("Dato no Valido")
-        teorica = input("Prueba teorica: ")
-        if teorica.isnumeric():
-            infoNota["Teorica"]=teorica
-            bandera = False
-        else:
-            print("Dato no Valido")
-    bandera=True
-    while (bandera):
-        practica = input("Prueba practica: ")
-        if practica.isnumeric():
-            infoNota["Practica"]=practica
-            bandera = False
-        else:
-            print("Dato no Valido")
-    bandera=True
-    while (bandera):
-        trabajos = input("Quizes y trabajos: ")
-        if trabajos.isnumeric():
-            infoNota["Trabajos"]=trabajos
-            bandera = False
-        else:
-            print("Dato no Valido")
+        id=input("Indique id del camper\n")
+        with open("modulo/storage/camper.json") as f:
+            campers=json.loads(f.read())
+            for camper in campers:
+                if id==camper["Id"] and camper["Estado"]=="Aprobado":
+                    infoNota = {
+            "Id":"",
+            "Teorica":"",
+            "Practica":"",
+            "Trabajos":""
+        }
+                    infoNota["Id"]=id
+                    bandera1=True
+                    while (bandera1):
+                        teorica = input("Prueba teorica: ")
+                        if teorica.isnumeric():
+                            infoNota["Teorica"]=teorica
+                            bandera1=False
+                    bandera1=True
+                    while (bandera1):        
+                        practica=input("Prueba practica: ")
+                        if practica.isnumeric():
+                            infoNota["Practica"]=practica
+                            bandera1=False
+                    bandera1=True
+                    while (bandera):
+                        trabajos=input("trabajos: ")
+                        if trabajos.isnumeric():
+                            infoNota["Trabajos"]=trabajos
+                            bandera1=False
+                    with open("modulo/storage/notas.json") as f:
+                        notas = json.load(f)
+                        notas.append(infoNota)
+                    with open("modulo/storage/notas.json", "w") as f:
+                        data=json.dumps(notas, indent=4)
+                        f.write(data)
+                        f.close()
+                        system("clear")
+                elif id==camper["Id"] and camper["Estado"]=="Preseleccion":
+                    infoNota={
+                        "Id": "",
+                        "Teorica": "",
+                        "Practica": "",
+                    }
+                    infoNota["Id"]=id
+                    bandera1=True
+                    while (bandera1):
+                        teorica = input("Prueba teorica: ")
+                        if teorica.isnumeric():
+                            infoNota["Teorica"]=teorica
+                            bandera1=False
+                    bandera1=True
+                    while (bandera1):        
+                        practica=input("Prueba practica: ")
+                        if practica.isnumeric():
+                            infoNota["Practica"]=practica
+                            bandera1=False
+                    if int(practica)+int(teorica)/2 >= 60:
+                        camper["Estado"]="Inscrito"
+                    with open("modulo/storage/camper.json","w") as f:
+                        dataCamper=json.dumps(campers, indent=4)
+                        f.write(dataCamper)
+                        f.close()
 
-    with open("modulo/storage/notas.json") as f:
-        notas = json.load(f)
 
-    notas.append(infoNota)
-    with open("modulo/storage/notas.json", "w") as f:
-        data=json.dumps(notas, indent=4)
-        f.write(data)
-        f.close()
-        system("clear")
-    return "Guardado Exitoso"
+                    with open("modulo/storage/preNotas.json") as f:
+                        notas = json.load(f)
+                        notas.append(infoNota)
+                    with open("modulo/storage/preNotas.json", "w") as f:
+                        data=json.dumps(notas, indent=4)
+                        f.write(data)
+                        f.close()
+                        system("clear")
+        bandera=False
+    return "Guardado"
+
+    # #system("clear")
+    # infoNota = {
+    #     "Id":"",
+    #     "Teorica":"",
+    #     "Practica":"",
+    #     "Trabajos":""
+    # }
+    # bandera=True
+    # while (bandera):
+    #     id = input("Escriba el documento del camper:")
+    #     if id.isnumeric():
+    #         infoNota["Id"] = id
+    #         bandera=False
+    #     else:
+    #         print("Dato no Valido")
+    #     teorica = input("Prueba teorica: ")
+    #     if teorica.isnumeric():
+    #         infoNota["Teorica"]=teorica
+    #         bandera = False
+    #     else:
+    #         print("Dato no Valido")
+    # bandera=True
+    # while (bandera):
+    #     practica = input("Prueba practica: ")
+    #     if practica.isnumeric():
+    #         infoNota["Practica"]=practica
+    #         bandera = False
+    #     else:
+    #         print("Dato no Valido")
+    # bandera=True
+    # while (bandera):
+    #     trabajos = input("Quizes y trabajos: ")
+    #     if trabajos.isnumeric():
+    #         infoNota["Trabajos"]=trabajos
+    #         bandera = False
+    #     else:
+    #         print("Dato no Valido")
+
+    # with open("modulo/storage/notas.json") as f:
+    #     notas = json.load(f)
+
+    # notas.append(infoNota)
+    # with open("modulo/storage/notas.json", "w") as f:
+    #     data=json.dumps(notas, indent=4)
+    #     f.write(data)
+    #     f.close()
+    #     system("clear")
+    # return "Guardado Exitoso"
 
 
 def buscar():

@@ -7,7 +7,8 @@
         "Direccion": "Calle de Dios",
         "Acudiente": null,
         "Telefono": "3216549780",
-        "Estado": "2"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "Hermes",
@@ -17,7 +18,8 @@
         "Direccion": "Los Angeles ",
         "Acudiente": "jorg",
         "Telefono": "3213216546",
-        "Estado": "1"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "Karen",
@@ -27,7 +29,8 @@
         "Direccion": "Melbourne Victoria",
         "Acudiente": null,
         "Telefono": "3102864855",
-        "Estado": "1"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "James",
@@ -37,7 +40,8 @@
         "Direccion": "Londres U.K",
         "Acudiente": null,
         "Telefono": "9876543210",
-        "Estado": "5"
+        "Estado": "Inscrito",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "pepita",
@@ -47,7 +51,8 @@
         "Direccion": "coorado",
         "Acudiente": null,
         "Telefono": "3214566892",
-        "Estado": "1"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "Darla",
@@ -57,7 +62,8 @@
         "Direccion": "Wallaby Street 42 Sidney",
         "Acudiente": null,
         "Telefono": "32145698",
-        "Estado": "2"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "carmen",
@@ -67,7 +73,8 @@
         "Direccion": "asdf",
         "Acudiente": null,
         "Telefono": "321456977",
-        "Estado": "1"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "Sherlock",
@@ -77,7 +84,8 @@
         "Direccion": "221 Baker Street",
         "Acudiente": null,
         "Telefono": "3112254613",
-        "Estado": "4"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "Jhonatan",
@@ -87,7 +95,8 @@
         "Direccion": "adfa3ds2f16ad5f13as2",
         "Acudiente": null,
         "Telefono": "3213215132",
-        "Estado": "3"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "Harry",
@@ -97,7 +106,8 @@
         "Direccion": "4 Privet Drive, Bajo la escalera",
         "Acudiente": null,
         "Telefono": "31125254621",
-        "Estado": "5"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     },
     {
         "Nombre": "Alicia",
@@ -107,6 +117,29 @@
         "Direccion": "Pais de las maravillas",
         "Acudiente": null,
         "Telefono": "321400215",
-        "Estado": "Preinscrito"
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
+    },
+    {
+        "Nombre": "Luciano",
+        "Apellido": "Pavaroti",
+        "Edad": "45",
+        "Id": "130",
+        "Direccion": "Italia",
+        "Acudiente": null,
+        "Telefono": "555",
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
+    },
+    {
+        "Nombre": "Luis",
+        "Apellido": "Miguel",
+        "Edad": "50",
+        "Id": "131",
+        "Direccion": "Mexico",
+        "Acudiente": null,
+        "Telefono": "456",
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     }
 ]

@@ -14,8 +14,8 @@ def guardar():
         "Direccion": "",
         "Acudiente": "",
         "Telefono": "",
-        "Estado": "Preinscrito",
-
+        "Estado": "",
+        "Riesgo": ""
     }
     infoCamp["Nombre"] = input("Ingrese nombre(s) del camper\n")
     infoCamp["Apellido"] = input("Ingrese apellido(s) del camper\n")
@@ -48,8 +48,14 @@ def guardar():
             bandera = False
         else:
              print("Dato no Valido")
-    #infoCamp["Estado"] = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
-    infoCamp["Estado"]="Preinscrito"
+    variable = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
+    if variable=="1":
+        infoCamp["Estado"]="Preseleccion"
+    elif variable=="2":
+        infoCamp["Estado"]="Inscrito"
+    elif variable=="3":
+        infoCamp["Estado"]="Aprobado"
+    infoCamp["Riesgo"]="Normal"
 
     with open("modulo/storage/camper.json") as f:
         camper = json.load(f)

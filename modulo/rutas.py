@@ -26,8 +26,6 @@ def enrutamiento():
             elif rut==3:
                 ruta["Ruta"]="Netcore"
                 bandera1==False
-            else:
-                print("Opcion no valida")
         with open("modulo/storage/rutas.json") as f:
             rutas1 = json.loads(f.read())
             f.close()
