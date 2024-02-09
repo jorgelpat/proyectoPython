@@ -1,44 +1,9 @@
 [
     {
-        "Id": "119",
-        "Teorica": "60",
-        "Practica": "90",
-        "Trabajos": "75"
-    },
-    {
-        "Id": "123",
-        "Teorica": "45",
-        "Practica": "85",
-        "Trabajos": "25"
-    },
-    {
-        "Id": "124",
-        "Teorica": "80",
-        "Practica": "35",
-        "Trabajos": "40"
-    },
-    {
-        "Id": "007",
-        "Teorica": "25",
-        "Practica": "35",
-        "Trabajos": "60"
-    },
-    {
-        "Id": "125",
-        "Teorica": "60",
-        "Practica": "85",
-        "Trabajos": "25"
-    },
-    {
-        "Id": "129",
-        "Teorica": "40",
-        "Practica": "35",
-        "Trabajos": "40"
-    },
-    {
-        "Id": "155",
+        "Modulo": 1,
+        "Id": "131",
         "Teorica": "85",
         "Practica": "75",
-        "Trabajos": "80"
+        "Trabajos": "60"
     }
 ]

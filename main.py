@@ -29,7 +29,7 @@ def menuPrincipal():
             opc = int(input())
             match(opc):
                 case 1: mNotas.buscar()
-                case 2: mNotas.guardarNotasModulo()
+                case 2: mNotas.guardarNotasModulo()#Falta opcion 3
                 case 4: menuPrincipal()
         case 3: mTrainer.menuTrainer()
         case 4: mNotas.preNotas()

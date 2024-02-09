@@ -29,7 +29,7 @@
         "Direccion": "Melbourne Victoria",
         "Acudiente": null,
         "Telefono": "3102864855",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal"
     },
     {
@@ -139,7 +139,7 @@
         "Direccion": "Mexico",
         "Acudiente": null,
         "Telefono": "456",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal"
     }
 ]

@@ -77,14 +77,15 @@ def guardarNotasModulo():
         with open("modulo/storage/camper.json") as f:
             campers=json.loads(f.read())
             for camper in campers:
-                if id==camper["Id"] and camper["Estado"]=="Aprobado":
+                if id==camper["Id"] and camper["Estado"]=="Inscrito":
                     infoNota = {
-            "Modulo":"",#Se crea para generar un contador
+            "Modulo": int(),
             "Id":"",
-            "Teorica":"",#Poner un Contador para identificar el módulo
+            "Teorica":"",
             "Practica":"",
             "Trabajos":""
         }
+                    infoNota["Modulo"]=int(input("¿En qué modulo desea guardar las notas?"))
                     infoNota["Id"]=id
                     bandera1=True
                     while (bandera1):
@@ -99,7 +100,7 @@ def guardarNotasModulo():
                             infoNota["Practica"]=practica
                             bandera1=False
                     bandera1=True
-                    while (bandera):
+                    while (bandera1):
                         trabajos=input("trabajos: ")
                         if trabajos.isnumeric():
                             infoNota["Trabajos"]=trabajos

@@ -308,7 +308,7 @@ def inscritos():
         campers = json.loads(f.read())
         f.close()
         for camper in campers:
-            if camper["Estado"]=="2":
+            if camper["Estado"]=="Inscrito":
                 print(f"""
 ****************************
 Nombre: {camper.get("Nombre")}
