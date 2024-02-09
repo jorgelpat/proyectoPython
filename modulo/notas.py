@@ -60,6 +60,11 @@ def preNotas():
 #si es incsrito, pedirle 3 y guardarlas y si es aprobado guardarlas en otro Json
 
 
+def contar_modulo(jsondata,clave,valor):
+    contador=0
+    for k, v in jsondata.items():
+        if k==clave:
+            contador+=v.count(valor)  #Contador no terminado
 
 
 
