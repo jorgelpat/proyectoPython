@@ -134,6 +134,8 @@ def guardarNotasModulo():
                             bandera1=False
                     if int(practica)+int(teorica)/2 >= 60:
                         camper["Estado"]="Inscrito"
+                    else:
+                        camper["Estado"]="Filtrado"
                     with open("modulo/storage/camper.json","w") as f:
                         dataCamper=json.dumps(campers, indent=4)
                         f.write(dataCamper)
