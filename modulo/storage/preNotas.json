@@ -3,5 +3,10 @@
         "Id": "131",
         "Teorica": "90",
         "Practica": "90"
+    },
+    {
+        "Id": "132",
+        "Teorica": "75",
+        "Practica": "30"
     }
 ]

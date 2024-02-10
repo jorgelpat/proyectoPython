@@ -84,7 +84,7 @@
         "Direccion": "221 Baker Street",
         "Acudiente": null,
         "Telefono": "5552123",
-        "Estado": "2",
+        "Estado": "Inscrito",
         "Riesgo": "Normal"
     },
     {
@@ -122,13 +122,13 @@
     },
     {
         "Nombre": "Luciano",
-        "Apellido": "Pavaroti",
+        "Apellido": "Pavarotti",
         "Edad": "45",
         "Id": "130",
         "Direccion": "Italia",
         "Acudiente": null,
-        "Telefono": "555",
-        "Estado": "Preseleccion",
+        "Telefono": "1235631",
+        "Estado": "Inscrito",
         "Riesgo": "Normal"
     },
     {
@@ -145,12 +145,12 @@
     {
         "Nombre": "Brad",
         "Apellido": "Pitt",
-        "Edad": "56",
+        "Edad": "55",
         "Id": "132",
-        "Direccion": "Los Angeles",
+        "Direccion": "California",
         "Acudiente": null,
-        "Telefono": "123654",
-        "Estado": "Preseleccion",
+        "Telefono": "2252213",
+        "Estado": "Aprobado",
         "Riesgo": "Normal"
     }
 ]
