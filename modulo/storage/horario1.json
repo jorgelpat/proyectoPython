@@ -2,7 +2,8 @@
     {
         "Campers": [
             "119",
-            "007"
+            "007",
+            "132"
         ],
         "Trainer": "201",
         "Area": "1",
@@ -10,13 +11,13 @@
     },
     {
         "Campers": [],
-        "Trainer": "",
+        "Trainer": "202",
         "Area": "2",
         "Ruta": "NodeJS"
     },
     {
         "Campers": [],
-        "Trainer": "",
+        "Trainer": "203",
         "Area": "3",
         "Ruta": "Java"
     }

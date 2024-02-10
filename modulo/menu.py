@@ -22,5 +22,5 @@ def menuCamper():
             case 2: mCamper.buscar()
             case 3: mCamper.actualizar()
             case 4: mCamper.eliminar()
-            case 5: bandera1=False
+            case 5: break
             case _: valid.noValid(opc)

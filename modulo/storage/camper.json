@@ -145,12 +145,12 @@
     {
         "Nombre": "Brad",
         "Apellido": "Pitt",
-        "Edad": "25",
+        "Edad": "56",
         "Id": "132",
-        "Direccion": "Los Angeles",
+        "Direccion": "afdsaf",
         "Acudiente": null,
-        "Telefono": "1555253",
-        "Estado": "Preseleccion",
+        "Telefono": "32158",
+        "Estado": "Aprobado",
         "Riesgo": "Normal"
     }
 ]

@@ -116,8 +116,6 @@ def actualizar():
                     elif opt == 2:
                         datos["Estado"] = "Inscrito"
         bandera=False
-                # else:
-                #     print("no hay ningun camper registrado con esa identificacion")
     with open("modulo/storage/camper.json","w") as f:
         data = json.dumps(data, indent=4)
         f.write(data)
