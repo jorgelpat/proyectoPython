@@ -213,17 +213,16 @@ def actualizar():
 
 
 def buscar():
-    bandera = True
-    while (bandera):
+    while (True):
         id = input("Ingrese numero de identificacion del camper:\n")
         if id.isnumeric():
-            bandera=False
+            break
     with open("modulo/storage/camper.json") as f:
         data=json.loads(f.read())
         f.close()
-        for datos in data:
-            if id == datos["Id"]:
-                print(f"""
+    for datos in data:
+        if id == datos["Id"]:
+            print(f"""
 Nombre: {datos.get('Nombre')}      
 Apellido: {datos.get('Apellido')}
 Edad: {datos.get('Edad')}
@@ -232,16 +231,14 @@ Direccion: {datos.get('Direccion')}
 Acudiente: {datos.get('Acudiente')}
 Teléfono: {datos.get('Telefono')}
 Estado: {datos.get('Estado')}                          
-                    """)
-    bandera=True
-    while (bandera):
-        print("\t1. Seguir Buscando")
-        print("\t2. Salir")
-        opc=int(input())
-        if opc == 1:
-            buscar()
-        elif opc==2:
-            bandera=False
+                """)
+            print("\t1. Seguir Buscando")
+            print("\t2. Salir")
+            opc=int(input())
+            if opc == 1:
+                buscar()
+            elif opc==2:
+                break
     return "Camper cargado"
 
 
