@@ -6,7 +6,12 @@
     },
     {
         "Id": "132",
-        "Teorica": "75",
-        "Practica": "30"
+        "Teorica": "50",
+        "Practica": "50"
+    },
+    {
+        "Id": "130",
+        "Teorica": "60",
+        "Practica": "61"
     }
 ]

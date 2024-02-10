@@ -128,7 +128,7 @@
         "Direccion": "Italia",
         "Acudiente": null,
         "Telefono": "1235631",
-        "Estado": "Inscrito",
+        "Estado": "Aprobado",
         "Riesgo": "Normal"
     },
     {
@@ -139,7 +139,7 @@
         "Direccion": "Mexico",
         "Acudiente": null,
         "Telefono": "456",
-        "Estado": "Inscrito",
+        "Estado": "Aprobado",
         "Riesgo": "Normal"
     },
     {
@@ -150,7 +150,7 @@
         "Direccion": "California",
         "Acudiente": null,
         "Telefono": "2252213",
-        "Estado": "Aprobado",
+        "Estado": "Filtrado",
         "Riesgo": "Normal"
     }
 ]
