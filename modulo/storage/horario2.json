@@ -1,7 +1,7 @@
 [
     {
         "Campers": [],
-        "Trainer": "",
+        "Trainer": "202",
         "Area": "1"
     },
     {
@@ -13,10 +13,5 @@
         "Campers": [],
         "Trainer": "",
         "Area": "3"
-    },
-    {
-        "Campers": [],
-        "Trainer": "",
-        "Area": "4"
     }
 ]
