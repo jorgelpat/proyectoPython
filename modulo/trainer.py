@@ -66,6 +66,15 @@ Nombre: {trainer.get("Nombre")}
 Apellido: {trainer.get("Apellido")}
 Id: {trainer.get("Id")}  
                       """)
+    bandera=True
+    while (bandera):
+        print("\t1. Seguir Buscando")
+        print("\t2. Salir")
+        opc=int(input())
+        if opc == 1:
+            buscar()
+        elif opc==2:
+            bandera=False
     return "Trainer Cargado"
 
         

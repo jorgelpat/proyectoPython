@@ -141,5 +141,16 @@
         "Telefono": "456",
         "Estado": "Inscrito",
         "Riesgo": "Normal"
+    },
+    {
+        "Nombre": "Brad",
+        "Apellido": "Pitt",
+        "Edad": "25",
+        "Id": "132",
+        "Direccion": "Los Angeles",
+        "Acudiente": null,
+        "Telefono": "1555253",
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     }
 ]

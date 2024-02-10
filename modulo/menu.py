@@ -6,13 +6,13 @@ import modulo.notas as mNotas
 
 
 def menuCamper():
+    bandera1 = True
     print("\t1. Registro de camper")
     print("\t2. Buscar Camper")
     print("\t3. Actualizar Camper")
     print("\t4. Eliminar Camper")
     print("\t5. Atrás")
 
-    bandera1 = True
     while (bandera1):
         opc = int(input())
         match(opc):

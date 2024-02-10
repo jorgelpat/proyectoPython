@@ -48,13 +48,14 @@ def guardar():
             bandera = False
         else:
              print("Dato no Valido")
-    variable = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
-    if variable=="1":
-        infoCamp["Estado"]="Preseleccion"
-    elif variable=="2":
-        infoCamp["Estado"]="Inscrito"
-    elif variable=="3":
-        infoCamp["Estado"]="Aprobado"
+    infoCamp["Estado"]="Preseleccion"
+    # variable = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
+    # if variable=="1":
+    #     infoCamp["Estado"]="Preseleccion"
+    # elif variable=="2":
+    #     infoCamp["Estado"]="Inscrito"
+    # elif variable=="3":
+    #     infoCamp["Estado"]="Aprobado"
     infoCamp["Riesgo"]="Normal"
 
     with open("modulo/storage/camper.json") as f:
@@ -202,42 +203,33 @@ def actualizar():
 def buscar():
     bandera = True
     while (bandera):
-        system("clear")
-    #     for i, val in enumerate(camper):
-    #         print(f"""
-    # Código: {i}
-    # Nombre: {val.get('Nombre')}      
-    # Apellido: {val.get('Apellido')}
-    # Edad: {val.get('Edad')}
-    # Id: {val.get('Id')}
-    # Direccion: {val.get('Direccion')}
-    # Acudiente: {val.get('Acudiente')}
-    # Teléfono: {val.get('Telefono')}
-    # Estado: {val.get('Estado')}
-    #               """)
         id = input("Ingrese numero de identificacion del camper:\n")
-        with open("modulo/storage/camper.json") as f:
-            data=json.loads(f.read())
-            f.close()
-            for datos in data:
-                if id == datos["Id"]:
-                    print(f"""
-    Nombre: {datos.get('Nombre')}      
-    Apellido: {datos.get('Apellido')}
-    Edad: {datos.get('Edad')}
-    Id: {datos.get('Id')}
-    Direccion: {datos.get('Direccion')}
-    Acudiente: {datos.get('Acudiente')}
-    Teléfono: {datos.get('Telefono')}
-    Estado: {datos.get('Estado')}                          
-                        """)
-        print("\t1. Salir\n")
-        opc = int(input())
+        if id.isnumeric():
+            bandera=False
+    with open("modulo/storage/camper.json") as f:
+        data=json.loads(f.read())
+        f.close()
+        for datos in data:
+            if id == datos["Id"]:
+                print(f"""
+Nombre: {datos.get('Nombre')}      
+Apellido: {datos.get('Apellido')}
+Edad: {datos.get('Edad')}
+Id: {datos.get('Id')}
+Direccion: {datos.get('Direccion')}
+Acudiente: {datos.get('Acudiente')}
+Teléfono: {datos.get('Telefono')}
+Estado: {datos.get('Estado')}                          
+                    """)
+    bandera=True
+    while (bandera):
+        print("\t1. Seguir Buscando")
+        print("\t2. Salir")
+        opc=int(input())
         if opc == 1:
-            menu()
-            #No es posible salir de la funcion
-            #Error al cargar la funcion
-
+            buscar()
+        elif opc==2:
+            bandera=False
     return "Camper cargado"
 
 

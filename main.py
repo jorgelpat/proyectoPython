@@ -11,7 +11,7 @@ import modulo.horarios as mHorarios
 def menuPrincipal():
     #system("clear")
     print("Seguimiento Academico de Campers")
-    print("\t1. Modulo camper")
+    print("\t1. Menu Camper")
     print("\t2. Modulo notas")
     print("\t3. Modulo trainer")
     print("\t4. Probar notas trainer")
@@ -54,8 +54,11 @@ def menuPrincipal():
         case 7: mRuta.enrutamiento()
 
 
-bandera = True
+bandera=True
 while (bandera):
     menuPrincipal()
-    
+
+
+
+
 
