@@ -110,16 +110,28 @@ def actualizar():
                             bandera1 = False
                         else:
                             print("Dato no Valido")
-                    datos["Estado"] = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
-                else:
-                    print("no hay ningun camper registrado con esa identificacion")
-        with open("modulo/storage/camper.json","w") as f:
-            data = json.dumps(data, indent=4)
-            f.write(data)
-            f.close()            
-        print("Operacion Terminada")
-        print("\t1. Salir")
-        print("\t2. Seguir editando")
+                    opt = input("Elija estado del camper:\n\t"+"\t".join([f"{estados.index(i)+1}. {i}\n" for i in estados]))
+                    if opt == 1:
+                        datos["Estado"] = "Preseleccion"
+                    elif opt == 2:
+                        datos["Estado"] = "Inscrito"
+        bandera=False
+                # else:
+                #     print("no hay ningun camper registrado con esa identificacion")
+    with open("modulo/storage/camper.json","w") as f:
+        data = json.dumps(data, indent=4)
+        f.write(data)
+        f.close()
+             
+    print("Operacion Terminada")
+    print("\t1. Seguir Editando")
+    print("\t2. Salir")
+    opt=int(input())
+    if opt == 1:
+        actualizar()
+    elif opt == 2:
+        menu.menuCamper()
+
 
     return "Edicion Terminada" #No terminado, Error en la salida, no da opcion de salir
 

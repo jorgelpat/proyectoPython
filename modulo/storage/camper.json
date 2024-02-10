@@ -66,13 +66,13 @@
         "Riesgo": "Normal"
     },
     {
-        "Nombre": "carmen",
-        "Apellido": "rosa",
+        "Nombre": "Carmen",
+        "Apellido": "Rosa",
         "Edad": "75",
         "Id": "125",
-        "Direccion": "asdf",
+        "Direccion": "asdfads",
         "Acudiente": null,
-        "Telefono": "321456977",
+        "Telefono": "321654",
         "Estado": "Preseleccion",
         "Riesgo": "Normal"
     },
@@ -83,8 +83,8 @@
         "Id": "126",
         "Direccion": "221 Baker Street",
         "Acudiente": null,
-        "Telefono": "3112254613",
-        "Estado": "Preseleccion",
+        "Telefono": "5552123",
+        "Estado": "2",
         "Riesgo": "Normal"
     },
     {

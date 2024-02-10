@@ -77,7 +77,7 @@ def guardarNotasModulo():
         with open("modulo/storage/camper.json") as f:
             campers=json.loads(f.read())
             for camper in campers:
-                if id==camper["Id"] and camper["Estado"]=="Inscrito":
+                if id==camper["Id"] and camper["Estado"]=="Aprobado":
                     infoNota = {
             "Modulo": int(),
             "Id":"",
@@ -113,7 +113,7 @@ def guardarNotasModulo():
                         f.write(data)
                         f.close()
                         system("clear")
-                elif id==camper["Id"] and camper["Estado"]=="Preseleccion":
+                elif id==camper["Id"] and camper["Estado"]=="Inscrito":
                     infoNota={
                         "Id": "",
                         "Teorica": "",
