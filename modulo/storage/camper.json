@@ -147,10 +147,10 @@
         "Apellido": "Pitt",
         "Edad": "56",
         "Id": "132",
-        "Direccion": "afdsaf",
+        "Direccion": "Los Angeles",
         "Acudiente": null,
-        "Telefono": "32158",
-        "Estado": "Aprobado",
+        "Telefono": "123654",
+        "Estado": "Preseleccion",
         "Riesgo": "Normal"
     }
 ]
