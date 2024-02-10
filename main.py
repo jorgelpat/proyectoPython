@@ -15,7 +15,7 @@ def menuPrincipal():
     print("\t2. Modulo notas")
     print("\t3. Modulo trainer")
     print("\t4. Probar notas trainer")
-    print("\t5. prueba horarios trainer")
+    print("\t5. Asiganacion Horaria")
     print("\t6. Listas de Campers")
     print("\t7. Rutas")
     opc = int(input())
@@ -34,7 +34,38 @@ def menuPrincipal():
                 case 4: menuPrincipal()
         case 3: mTrainer.menuTrainer()
         case 4: mNotas.preNotas()
-        case 5: mHorarios.ingreso_trainer_hora2()
+        case 5: 
+            print("\t1. Asiganacion Horaria de Trainers")
+            print("\t2. Asignacion Horaria de Campers")
+            opc = int(input())
+            if opc == 1:
+                print("\t1. 06am a 10am")
+                print("\t2. 10am a 02pm")
+                print("\t3. 02pm a 06pm")
+                print("\t4. 06pm a 10pm")
+                opc=int(input())
+                if opc == 1:
+                    mHorarios.ingreso_trainer_hora1()
+                if opc == 2:
+                    mHorarios.ingreso_trainer_hora2()
+                if opc == 3:
+                    mHorarios.ingreso_trainer_hora3()
+                if opc == 4:
+                    mHorarios.ingreso_trainer_hora4()
+            if opc == 2:
+                print("\t1. 06am a 10am")
+                print("\t2. 10am a 02pm")
+                print("\t3. 02pm a 06pm")
+                print("\t4. 06pm a 10pm")
+                opc=int(input())
+                if opc == 1:
+                    mHorarios.ingreso_camper_hora1()
+                if opc == 2:
+                    mHorarios.ingreso_camper_hora2()
+                if opc == 3:
+                    mHorarios.ingreso_camper_hora3()
+                if opc == 4:
+                    mHorarios.ingreso_camper_hora4()
         case 6:
             print("\t1. Campers Aprobados")
             print("\t2. Campers con bajo rendimiento")

@@ -5,16 +5,19 @@
             "007"
         ],
         "Trainer": "201",
-        "Area": "1"
+        "Area": "1",
+        "Ruta": {}
     },
     {
         "Campers": [],
         "Trainer": "",
-        "Area": "2"
+        "Area": "2",
+        "Ruta": {}
     },
     {
         "Campers": [],
         "Trainer": "",
-        "Area": "3"
+        "Area": "3",
+        "Ruta": {}
     }
 ]
