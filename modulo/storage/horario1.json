@@ -1,1 +1,20 @@
-[]
+[
+    {
+        "Campers": [
+            "119",
+            "007"
+        ],
+        "Trainer": "",
+        "Area": "1"
+    },
+    {
+        "Campers": [],
+        "Trainer": "",
+        "Area": "2"
+    },
+    {
+        "Campers": [],
+        "Trainer": "",
+        "Area": "3"
+    }
+]
