@@ -45,13 +45,53 @@ def menuPrincipal():
                 print("\t4. 06pm a 10pm")
                 opc=int(input())
                 if opc == 1:
-                    mHorarios.ingreso_trainer_hora1()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_trainer_hora1_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_trainer_hora1_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_trainer_hora1_area3()
                 if opc == 2:
-                    mHorarios.ingreso_trainer_hora2()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_trainer_hora2_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_trainer_hora2_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_trainer_hora2_area3()
                 if opc == 3:
-                    mHorarios.ingreso_trainer_hora3()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_trainer_hora3_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_trainer_hora3_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_trainer_hora3_area3()
                 if opc == 4:
-                    mHorarios.ingreso_trainer_hora4()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_trainer_hora4_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_trainer_hora4_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_trainer_hora4_area3()
             if opc == 2:
                 print("\t1. 06am a 10am")
                 print("\t2. 10am a 02pm")
@@ -59,13 +99,53 @@ def menuPrincipal():
                 print("\t4. 06pm a 10pm")
                 opc=int(input())
                 if opc == 1:
-                    mHorarios.ingreso_camper_hora1()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_camper_hora1_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_camper_hora1_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_camper_hora1_area3()
                 if opc == 2:
-                    mHorarios.ingreso_camper_hora2()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_camper_hora2_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_camper_hora2_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_camper_hora2_area3()
                 if opc == 3:
-                    mHorarios.ingreso_camper_hora3()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_camper_hora3_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_camper_hora3_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_camper_hora3_area3()
                 if opc == 4:
-                    mHorarios.ingreso_camper_hora4()
+                    print("Ruta de entrenamiento")
+                    print("\t1. Netcore")
+                    print("\t2. NodeJS")
+                    print("\t3. Java")
+                    opc = int(input())
+                    if opc == 1:
+                        mHorarios.ingreso_camper_hora4_area1()
+                    elif opc == 2:
+                        mHorarios.ingreso_camper_hora4_area2()
+                    elif opc == 3:
+                        mHorarios.ingreso_camper_hora4_area3()
         case 6:
             print("\t1. Campers Aprobados")
             print("\t2. Campers con bajo rendimiento")

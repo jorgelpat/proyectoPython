@@ -6,18 +6,18 @@
         ],
         "Trainer": "201",
         "Area": "1",
-        "Ruta": {}
+        "Ruta": "NetCore"
     },
     {
         "Campers": [],
         "Trainer": "",
         "Area": "2",
-        "Ruta": {}
+        "Ruta": "NodeJS"
     },
     {
         "Campers": [],
         "Trainer": "",
         "Area": "3",
-        "Ruta": {}
+        "Ruta": "Java"
     }
 ]

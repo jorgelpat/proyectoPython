@@ -2,16 +2,19 @@
     {
         "Campers": [],
         "Trainer": "",
-        "Area": "1"
+        "Area": "1",
+        "Ruta": "NetCore"
     },
     {
         "Campers": [],
         "Trainer": "",
-        "Area": "2"
+        "Area": "2",
+        "Ruta": "NodeJS"
     },
     {
         "Campers": [],
         "Trainer": "",
-        "Area": "3"
+        "Area": "3",
+        "Ruta": "Java"
     }
 ]
