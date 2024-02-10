@@ -15,7 +15,7 @@ def menuPrincipal():
     print("\t2. Modulo notas")
     print("\t3. Modulo trainer")
     print("\t4. Probar notas trainer")
-    print("\t5. prueba horarios")
+    print("\t5. prueba horarios trainer")
     print("\t6. Listas de Campers")
     print("\t7. Rutas")
     opc = int(input())
@@ -34,7 +34,7 @@ def menuPrincipal():
                 case 4: menuPrincipal()
         case 3: mTrainer.menuTrainer()
         case 4: mNotas.preNotas()
-        case 5: mHorarios.ingreso_camper_hora1()
+        case 5: mHorarios.ingreso_trainer_hora1()
         case 6:
             print("\t1. Campers Aprobados")
             print("\t2. Campers con bajo rendimiento")

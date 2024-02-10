@@ -18,12 +18,18 @@ def ingreso_camper_hora1():
 
 def ingreso_trainer_hora1():
     id = input("Indique id del trainer que desea agregar:\n")
-    infArea1={
-        "Campers": [],
-        "Trainer": "",
-        "Area": "1"
-    }
-    infArea1["Trainer"]=id
+    with open("modulo/storage/horario1.json") as f:
+        horario=json.loads(f.read())
+        for opc in horario:
+            if opc["Area"]=="1":
+                opc["Trainer"]=id
+    with open("modulo/storage/horario1.json","w") as f:
+        horario=json.dumps(horario,indent=4)
+        f.write(horario)
+        f.close()
+    return "Trainer Agregado"
+
+
 
 def ingreso_camper_hora2():
     id = input("Indique id del camper: ")
@@ -43,12 +49,16 @@ def ingreso_camper_hora2():
 
 def ingreso_trainer_hora2():
     id = input("Indique id del trainer que desea agregar:\n")
-    infArea1={
-        "Campers": [],
-        "Trainer": "",
-        "Area": "1"
-    }
-    infArea1["Trainer"]=id
+    with open("modulo/storage/horario2.json") as f:
+        horario=json.loads(f.read())
+        for opc in horario:
+            if opc["Area"]=="1":
+                opc["Trainer"]=id
+    with open("modulo/storage/horario2.json","w") as f:
+        horario=json.dumps(horario,indent=4)
+        f.write(horario)
+        f.close()
+    return "Trainer Agregado"
 
 def ingreso_camper_hora3():
     id = input("Indique id del camper: ")
@@ -68,12 +78,16 @@ def ingreso_camper_hora3():
 
 def ingreso_trainer_hora3():
     id = input("Indique id del trainer que desea agregar:\n")
-    infArea1={
-        "Campers": [],
-        "Trainer": "",
-        "Area": "1"
-    }
-    infArea1["Trainer"]=id
+    with open("modulo/storage/horario3.json") as f:
+        horario=json.loads(f.read())
+        for opc in horario:
+            if opc["Area"]=="1":
+                opc["Trainer"]=id
+    with open("modulo/storage/horario3.json","w") as f:
+        horario=json.dumps(horario,indent=4)
+        f.write(horario)
+        f.close()
+    return "Trainer Agregado"
 
 def ingreso_camper_hora4():
     id = input("Indique id del camper: ")
@@ -93,11 +107,15 @@ def ingreso_camper_hora4():
 
 def ingreso_trainer_hora4():
     id = input("Indique id del trainer que desea agregar:\n")
-    infArea1={
-        "Campers": [],
-        "Trainer": "",
-        "Area": "1"
-    }
-    infArea1["Trainer"]=id
+    with open("modulo/storage/horario4.json") as f:
+        horario=json.loads(f.read())
+        for opc in horario:
+            if opc["Area"]=="1":
+                opc["Trainer"]=id
+    with open("modulo/storage/horario4.json","w") as f:
+        horario=json.dumps(horario,indent=4)
+        f.write(horario)
+        f.close()
+    return "Trainer Agregado"
 
 #Hace falta editar los datos para que se abran con el json
