@@ -6,7 +6,7 @@ import modulo.notas as mNotas
 
 
 def menuCamper():
-    
+    system("clear")
     while(True):
 
         print("\t1. Registro de camper")
@@ -15,12 +15,12 @@ def menuCamper():
         print("\t4. Eliminar Camper")
         print("\t5. Atrás")
 
-        opc = int(input())
+        opc = input()
         match(opc):
-            case 1:
+            case "1":
                 mCamper.guardar()
-            case 2: mCamper.buscar()
-            case 3: mCamper.actualizar()
-            case 4: mCamper.eliminar()
-            case 5: break
+            case "2": mCamper.buscar()
+            case "3": mCamper.actualizar()
+            case "4": mCamper.eliminar()
+            case "5": break
             case _: valid.noValid(opc)

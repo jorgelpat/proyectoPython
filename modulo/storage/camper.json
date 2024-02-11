@@ -37,7 +37,7 @@
         "Apellido": "Bond",
         "Edad": "123456",
         "Id": "007",
-        "Direccion": "Londres U.K",
+        "Direccion": "Confidencial",
         "Acudiente": null,
         "Telefono": "9876543210",
         "Estado": "Inscrito",
@@ -151,6 +151,17 @@
         "Acudiente": null,
         "Telefono": "2252213",
         "Estado": "Filtrado",
+        "Riesgo": "Normal"
+    },
+    {
+        "Nombre": "Julio",
+        "Apellido": "Cesar",
+        "Edad": "85",
+        "Id": "133",
+        "Direccion": "Palacio Romano, preguntar por el emperador",
+        "Acudiente": null,
+        "Telefono": "55546",
+        "Estado": "Preseleccion",
         "Riesgo": "Normal"
     }
 ]

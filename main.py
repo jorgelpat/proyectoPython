@@ -37,7 +37,7 @@ def menuPrincipal():
                 print("\t4. Atrás")
                 opc = input()
                 if opc.isnumeric():
-                    bendera=False
+                    bandera=False
             match(opc):
                 case "1": mNotas.buscar()
                 case "2": mNotas.guardarNotasModulo()#Falta opcion 3

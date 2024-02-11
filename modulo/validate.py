@@ -1,2 +1,5 @@
+from os import system
+
 def noValid(opc):
-    print(f"La opcion {opc} no está disponible")
+    system("clear")
+    print(f"La opcion '{opc}' no está disponible")
