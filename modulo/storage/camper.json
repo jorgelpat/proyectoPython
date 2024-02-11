@@ -163,5 +163,16 @@
         "Telefono": "55546",
         "Estado": "Preseleccion",
         "Riesgo": "Normal"
+    },
+    {
+        "Nombre": "Homero",
+        "Apellido": "Simpson",
+        "Edad": "45",
+        "Id": "134",
+        "Direccion": "Springfield",
+        "Acudiente": null,
+        "Telefono": "45646512",
+        "Estado": "Preseleccion",
+        "Riesgo": "Normal"
     }
 ]

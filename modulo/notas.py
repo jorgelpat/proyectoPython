@@ -1,10 +1,7 @@
 from os import system
 import json
 import modulo.validate as validate
-import main
 from .data import notas, camper
-
-
 
 
 def guardarNotasModulo():
@@ -130,7 +127,7 @@ def buscar():
         if opc=="1":
             buscar()
         elif opc=="2":
-            main.menuPrincipal()#Corregir codigo
+            break#Corregir codigo
         else:
             validate.noValid()
                 

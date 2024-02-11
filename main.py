@@ -257,6 +257,7 @@ def menuPrincipal():
                     mTrainer.listaTrainers()
                     
         case "7": mRuta.enrutamiento()
+        case _: valid.noValid()
 
 
 bandera=True
