@@ -241,8 +241,9 @@ def menuPrincipal():
             while(bandera):
                 print("\t1. Campers Aprobados")
                 print("\t2. Campers con bajo rendimiento")
-                print("\t3. Lista de Inscritos")
+                print("\t3. Lista de Campers Inscritos")
                 print("\t4. Lista de Trainers")
+                print("\t5. Lista de campers y trainers asignados a una ruta")
                 opc= input()
                 if opc.isnumeric():
                     bandera=False
@@ -255,6 +256,9 @@ def menuPrincipal():
                     mCamper.inscritos()
                 case "4":
                     mTrainer.listaTrainers()
+                case "5":
+                    mRuta.lista_ruta_netcore()
+
                     
         case "7": mRuta.enrutamiento()
         case _: valid.noValid()

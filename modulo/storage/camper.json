@@ -117,7 +117,7 @@
         "Direccion": "Pais de las maravillas",
         "Acudiente": null,
         "Telefono": "321400215",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal"
     },
     {
@@ -161,7 +161,7 @@
         "Direccion": "Palacio Romano, preguntar por el emperador",
         "Acudiente": null,
         "Telefono": "55546",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal"
     },
     {
@@ -172,7 +172,7 @@
         "Direccion": "Springfield",
         "Acudiente": null,
         "Telefono": "45646512",
-        "Estado": "Preseleccion",
+        "Estado": "Aprobado",
         "Riesgo": "Normal"
     }
 ]

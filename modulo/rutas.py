@@ -35,3 +35,26 @@ def enrutamiento():
             f.write(data)
             f.close()
             
+def lista_ruta_netcore():
+    with open("modulo/storage/horario1.json") as f:
+        horario1=json.loads(f.read())
+        for datos in horario1:
+            if datos["Ruta"]=="NetCore":
+        # with open("modulo/storage/horario2.json") as f:
+        #     horario2=json.loads(f.read())
+        #     with open("modulo/storage/horario3.json") as f:
+        #         horario3=json.loads(f.read())
+        #         with open("modulo/storage/horario4.json") as f:
+        #             horario4=json.loads(f.read())
+        #             for datos in horario1,horario2,horario3,horario4:
+        #                 if datos["Ruta"]=="NetCore":
+                print(f"""
+                        Id:{datos.get('Campers')}
+                        """)
+    bandera=True
+    while(bandera):
+        print("\t1. Salir")
+        opc=input()
+        if opc.isnumeric():
+            bandera=False#Mejorar
+

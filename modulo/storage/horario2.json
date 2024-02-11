@@ -1,6 +1,8 @@
 [
     {
-        "Campers": [],
+        "Campers": [
+            "134"
+        ],
         "Trainer": "",
         "Area": "1",
         "Ruta": "NetCore"

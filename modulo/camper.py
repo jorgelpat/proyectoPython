@@ -5,7 +5,7 @@ from .data import camper, estados
 
 
 def guardar():
-    #system("clear")
+    system("clear")
     infoCamp = {
         "Nombre": "",
         "Apellido": "",
@@ -157,6 +157,31 @@ Estado: {datos.get('Estado')}
             buscar()
     system("clear")
     return "Camper cargado"
+
+def eliminar():
+    bandera=True
+    while(bandera):
+        id = input("Identificacion del camper a eliminar:\n")
+        if id.isnumeric():
+            bandera=False
+    with open("modulo/storage/camper.json") as f:
+        campers=json.loads(f.read())
+        for camper in campers:
+            if id == camper["Id"]:
+                camper["Nombre"]= "",
+                camper["Apellido"]= "",
+                camper["Edad"]= "",
+                camper["Id"]= "",
+                camper["Direccion"]= "",
+                camper["Acudiente"]= "",
+                camper["Telefono"]= "",
+                camper["Estado"]= "",
+                camper["Riesgo"]= ""
+    with open("modulo/storage/camper.json","w") as f:
+        campers=json.dumps(campers, indent=4)
+        f.write(campers)
+        f.close()
+    return "Camper Eliminado"
 
 
 
