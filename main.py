@@ -14,9 +14,9 @@ def menuPrincipal():
     while(bandera):
         print("Seguimiento Academico de Campers")
         print("\t1. Menu Camper")
-        print("\t2. Modulo notas")
-        print("\t3. Modulo trainer")
-        print("\t4. Probar notas trainer")
+        print("\t2. Menu notas")
+        print("\t3. Menu trainer")
+        print("\t4. Probar notas trainer")#No se usa
         print("\t5. Asiganacion Horaria")
         print("\t6. Listas de Campers")
         print("\t7. Rutas")
@@ -30,6 +30,7 @@ def menuPrincipal():
             system("clear")
             bandera=True
             while(bandera):
+                print("*****Menu Notas*****")
                 print("\t1. Ver notas")
                 print("\t2. Registrar notas")
                 print("\t3. Actualizar notas")
@@ -42,11 +43,11 @@ def menuPrincipal():
                 case "2": mNotas.guardarNotasModulo()#Falta opcion 3
                 case "4": menuPrincipal()
         case "3": mTrainer.menuTrainer()
-        case "4": mNotas.preNotas()
         case "5":
             system("clear")
             bandera=True
-            while(bandera): 
+            while(bandera):
+                print("********Asignacion de Horarios********")
                 print("\t1. Asiganacion Horaria de Trainers")
                 print("\t2. Asignacion Horaria de Campers")
                 opc = input()
@@ -56,6 +57,7 @@ def menuPrincipal():
                 system("clear")
                 bandera=True
                 while(bandera):
+                    print("***Horas Disponibles***")
                     print("\t1. 06am a 10am")
                     print("\t2. 10am a 02pm")
                     print("\t3. 02pm a 06pm")
@@ -146,6 +148,7 @@ def menuPrincipal():
                 system("clear")
                 bandera=True
                 while(bandera):
+                    print("***Horas Disponibles***")
                     print("\t1. 06am a 10am")
                     print("\t2. 10am a 02pm")
                     print("\t3. 02pm a 06pm")
