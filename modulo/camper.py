@@ -126,6 +126,7 @@ def actualizar():
 
 
 def buscar():
+    system("clear")
     while (True):
         id = input("Ingrese numero de identificacion del camper:\n")
         if id.isnumeric():
@@ -145,17 +146,16 @@ Acudiente: {datos.get('Acudiente')}
 Teléfono: {datos.get('Telefono')}
 Estado: {datos.get('Estado')}                          
                 """)
-            bandera=True
-            while(bandera):
-                print("\t1. Seguir Buscando")
-                print("\t2. Salir")
-            opc=input()
-            if opc.isnumeric():
-                bandera=False
-            if opc == 1:
-                buscar()
-            elif opc==2:
-                break
+    bandera=True
+    while(bandera):
+        print("\t1. Seguir Buscando")
+        print("\t2. Salir")
+        opc=input()
+        if opc.isnumeric():
+            bandera=False
+        if opc == 1:
+            buscar()
+    system("clear")
     return "Camper cargado"
 
 
