@@ -261,7 +261,7 @@ def menuPrincipal():
 
                     
         case "7": mRuta.enrutamiento()
-        case _: valid.noValid()
+        case _: valid.noValid(opc)
 
 
 bandera=True
