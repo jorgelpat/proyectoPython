@@ -16,10 +16,10 @@ def menuPrincipal():
         print("\t1. Menu Camper")
         print("\t2. Menu notas")
         print("\t3. Menu trainer")
-        print("\t4. Probar notas trainer")#No se usa
-        print("\t5. Asiganacion Horaria")
+        print("\t4. Lista de Asignados a Rutas")
+        print("\t5. Asignacion Horaria")
         print("\t6. Listas de Campers")
-        print("\t7. Rutas")
+        #print("\t7. Rutas")
 
         opc = input()
         if opc.isnumeric():
@@ -43,6 +43,20 @@ def menuPrincipal():
                 case "2": mNotas.guardarNotasModulo()#Falta opcion 3
                 case "4": menuPrincipal()
         case "3": mTrainer.menuTrainer()
+        case "4":
+            system("clear")
+            bandera=True
+            while(bandera):
+                print("\t1. Asignados a ruta NetCore")
+                print("\t2. Asignados a ruta NodeJS")
+                print("\t3. Asignados a ruta Java")
+                opc=input()
+                if opc.isnumeric():
+                    bandera=False
+            if opc=="1": mRuta.lista_ruta_netcore()
+            elif opc=="2": mRuta.lista_ruta_nodejs()
+            elif opc=="3": mRuta.lista_ruta_java()
+            else: valid.noValid()
         case "5":
             system("clear")
             bandera=True
@@ -243,7 +257,6 @@ def menuPrincipal():
                 print("\t2. Campers con bajo rendimiento")
                 print("\t3. Lista de Campers Inscritos")
                 print("\t4. Lista de Trainers")
-                print("\t5. Lista de campers y trainers asignados a una ruta")
                 opc= input()
                 if opc.isnumeric():
                     bandera=False
@@ -255,13 +268,11 @@ def menuPrincipal():
                 case "3":
                     mCamper.inscritos()
                 case "4":
-                    mTrainer.listaTrainers()
-                case "5":
-                    mRuta.lista_ruta_netcore()
-
-                    
-        case "7": mRuta.enrutamiento()
-        case _: valid.noValid(opc)
+                    mTrainer.listaTrainers()                   
+        # case "7": 
+        #     mRuta.enrutamiento()
+        case _: 
+            valid.noValid(opc)
 
 
 bandera=True
