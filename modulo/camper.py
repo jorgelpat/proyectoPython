@@ -15,7 +15,8 @@ def guardar():
         "Acudiente": "",
         "Telefono": "",
         "Estado": "",
-        "Riesgo": ""
+        "Riesgo": "",
+        "Warning": 0
     }
     infoCamp["Nombre"] = input("Ingrese nombre(s) del camper\n")
     infoCamp["Apellido"] = input("Ingrese apellido(s) del camper\n")
@@ -121,7 +122,24 @@ def actualizar():
         data = json.dumps(data, indent=4)
         f.write(data)
         f.close()
-             
+
+
+
+def actualizarEstado():
+    bandera=True
+    while(bandera):
+        id = input("Identificacion del camper:\n")
+        if id.isnumeric():
+            bandera=False
+    with open("modulo/storage/camper.json") as f:
+        campers=json.loads(f.read())
+        for camper in campers:
+            if camper["Id"]==id:
+                camper["Estado"]="Inscrito"
+    with open("modulo/storage/camper.json","w") as f:
+        campers=json.dumps(campers,indent=4)
+        f.write(campers)
+        f.close()
 
 
 
