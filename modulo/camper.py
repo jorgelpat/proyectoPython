@@ -67,7 +67,7 @@ def guardar():
         data = json.dumps(camper, indent=4)
         f.write(data)
         f.close()
-        #system("clear")
+        system("clear")
     return "Guardado Exitoso"
 
 
@@ -140,6 +140,7 @@ def actualizarEstado():
         campers=json.dumps(campers,indent=4)
         f.write(campers)
         f.close()
+    system("clear")
 
 
 

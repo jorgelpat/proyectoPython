@@ -101,44 +101,47 @@ def guardarNotasModulo():
 
 def buscar():
     while True:
-        id = int(input("Indique la identificacion del camper\n"))
-        with open("modulo/storage/notas.json","r") as f:
-            data = json.loads(f.read())
-            f.close()
-            for datos in data:
-                if id==datos["Id"]:
-                    print(datos)
-        print(datos)
-        with open("modulo/storage/camper.json","r") as f1:
-            data1 = json.loads(f1.read())
-            f1.close()
-            for datos1 in data1:
-                if id==datos1["Id"]:
-                    print(datos1)
-            print(f"""
-    ______________________________
-    ______________________________
-    Nombre: {datos1.get('Nombre')}      
-    Apellido: {datos1.get('Apellido')}
-    Teorica: {datos.get('Teorica')}
-    Practica: {datos.get('Practica')}
-    Trabajos: {datos.get('Trabajos')}  
-    ______________________________
-    ______________________________                  
-                """)
+        id = input("Indique la identificacion del camper\n")
+        if id.isnumeric():
+            break
+    with open("modulo/storage/notas.json","r") as f:
+        data = json.loads(f.read())
+        f.close()
+        for datos in data:
+            if id==datos["Id"]:
+                print(datos)
+                with open("modulo/storage/camper.json","r") as f1:
+                    data1 = json.loads(f1.read())
+                    f1.close()
+                    for datos1 in data1:
+                        if id==datos1["Id"]:
+                            print(datos1)
+                            print(f"""
+______________________________
+______________________________
+Nombre: {datos1.get('Nombre')}      
+Apellido: {datos1.get('Apellido')}
+Teorica: {datos.get('Teorica')}
+Practica: {datos.get('Practica')}
+Trabajos: {datos.get('Trabajos')}  
+______________________________
+______________________________                  
+                            """)
+            else:
+                print("No hay notas asociadadas a id {id}")
+    
         bandera=True
         while(bandera):
             print("\t1. Seguir Buscando")
             print("\t2. Salir")
             opc=input()
             if opc.isnumeric():
-                bandera=False
-        if opc=="1":
-            buscar()
-        elif opc=="2":
-            break#Corregir codigo
-        else:
-            validate.noValid()
+                if opc=="1":
+                    buscar()
+                elif opc=="2":
+                    bandera=False#Corregir codigo
+                else:
+                    validate.noValid()
                 
     return "Notas Cargadas"
 

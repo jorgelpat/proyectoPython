@@ -8,7 +8,7 @@ import modulo.notas as mNotas
 def menuCamper():
     system("clear")
     while(True):
-
+        print("*****Menu Camper*****")
         print("\t1. Registro de camper")
         print("\t2. Buscar Camper")
         print("\t3. Actualizar Camper")
@@ -24,6 +24,7 @@ def menuCamper():
                 system("clear")
                 bandera=True
                 while(bandera): 
+                    print("******Actualizar Camper******")
                     print("\t1. Actualizar Informacion completa del Camper")
                     print("\t2. Actualizar Estado a Inscrito")
                     opc=input()
