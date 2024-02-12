@@ -22,6 +22,7 @@ def menuPrincipal():
         #print("\t7. Rutas")
 
         opc = input()
+        system("clear")
         if opc.isnumeric():
             bandera=False
     match(opc):
@@ -47,6 +48,7 @@ def menuPrincipal():
             system("clear")
             bandera=True
             while(bandera):
+                print("*******Elige Ruta*******")
                 print("\t1. Asignados a ruta NetCore")
                 print("\t2. Asignados a ruta NodeJS")
                 print("\t3. Asignados a ruta Java")
