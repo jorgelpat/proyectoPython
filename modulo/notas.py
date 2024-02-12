@@ -39,6 +39,15 @@ def guardarNotasModulo():
                         if trabajos.isnumeric():
                             infoNota["Trabajos"]=trabajos
                             bandera1=False
+                    if (int(teorica)*0.3)+(int(practica)*0.6)+(int(trabajos)*0.1)<60:
+                        camper["Riesgo"]="En Riesgo"
+                        camper["Warning"]=camper["Warning"]+1
+                        if camper["Warning"]==2:
+                            camper["Estado"]="Filtrado"
+                    with open("modulo/storage/camper.json","w") as f:
+                        campers=json.dumps(campers,indent=4)
+                        f.write(campers)
+                        f.close()
                     with open("modulo/storage/notas.json") as f:
                         notas = json.load(f)
                         notas.append(infoNota)

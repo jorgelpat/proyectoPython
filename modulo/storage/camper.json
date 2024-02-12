@@ -140,7 +140,7 @@
         "Acudiente": null,
         "Telefono": "456",
         "Estado": "Aprobado",
-        "Riesgo": "Normal"
+        "Riesgo": "En Riesgo"
     },
     {
         "Nombre": "Brad",
