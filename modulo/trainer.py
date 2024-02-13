@@ -96,6 +96,9 @@ Apellido: {trainer.get("Apellido")}
 Id: {trainer.get("Id")}
 ********************
                   """)
+    while True:
+        salir= input("\nPresiona 'Enter' para Salir")
+        break
     return "Trainers Cargados"
 
 

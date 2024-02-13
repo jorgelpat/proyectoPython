@@ -227,11 +227,15 @@ def inscritos():
         f.close()
         for camper in campers:
             if camper["Estado"]=="Inscrito":
+                system("clear")
                 print(f"""
 ****************************
+Id: {camper.get("Id")}
 Nombre: {camper.get("Nombre")}
-Apellido: {camper.get("Apellido")}
-Id: {camper.get("Id")}    
+Apellido: {camper.get("Apellido")}    
 ****************************                  
                       """)
+    while True:
+        salir= input("\nPresiona 'Enter' para Salir")
+        break
     return "Camper Cargado"

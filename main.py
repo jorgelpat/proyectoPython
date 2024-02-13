@@ -42,6 +42,7 @@ def menuPrincipal():
             match(opc):
                 case "1": mNotas.buscar()
                 case "2": mNotas.guardarNotasModulo()#Falta opcion 3
+                case "3": mNotas.actNotas()
                 case "4": menuPrincipal()
         case "3": mTrainer.menuTrainer()
         case "4":
