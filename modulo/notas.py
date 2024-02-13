@@ -109,26 +109,24 @@ def buscar():
         f.close()
         for datos in data:
             if id==datos["Id"]:
-                print(datos)
+                #print(datos)
                 with open("modulo/storage/camper.json","r") as f1:
                     data1 = json.loads(f1.read())
                     f1.close()
                     for datos1 in data1:
                         if id==datos1["Id"]:
-                            print(datos1)
+                            #print(datos1)
                             print(f"""
-______________________________
-______________________________
+Modulo: {datos.get('Modulo')}
 Nombre: {datos1.get('Nombre')}      
 Apellido: {datos1.get('Apellido')}
 Teorica: {datos.get('Teorica')}
 Practica: {datos.get('Practica')}
 Trabajos: {datos.get('Trabajos')}  
-______________________________
-______________________________                  
+______________________________                 
                             """)
             else:
-                print("No hay notas asociadadas a id {id}")
+                print(f"No hay notas asociadadas a Id {id}")
     
         bandera=True
         while(bandera):
@@ -137,17 +135,16 @@ ______________________________
             opc=input()
             if opc.isnumeric():
                 if opc=="1":
+                    system("clear")
                     buscar()
                 elif opc=="2":
-                    bandera=False#Corregir codigo
+                    system("clear")
+                    bandera=False
                 else:
                     validate.noValid()
                 
     return "Notas Cargadas"
 
-# def actualizar():
-#     id = int(input("Identificación del camper:\n"))
-#     with open("modulo/storage/notas.json") as f:
 
 
 def aprobados():
@@ -197,3 +194,18 @@ Practica: {noAprobados.get('Practica')}
 Trabajos: {noAprobados.get('Trabajos')}
                               """)
     return "Lista de no aprobados"
+
+
+def lista_aprob_camper_trainer_modulo():
+    with open("modulo/storage/camper.json") as f:
+        campers=json.loads(f.read())
+    with open("modulo/storage/horario1.json") as f1:
+        horario1=json.loads(f1.read())
+    with open("modulo/storage/horario2.json") as f2:
+        horario2=json.loads(f2.read())
+    with open("modulo/storage/horario3.json") as f3:
+        horario3=json.loads(f3.read())
+    with open("modulo/storage/horario4.json") as f4:
+        horario4=json.loads(f4.read())
+    with open("modulo/storage/notas.json") as f5:
+        notas=json.loads(f5.read())
