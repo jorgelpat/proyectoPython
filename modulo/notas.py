@@ -147,6 +147,23 @@ ______________________________
 
 
 
+def actNotas():
+    id = input("Documento de camper:\n")
+    nModulo = input("Numero de módulo")
+    with open("modulo/storage/notas.json") as f:
+        notas=json.loads(f.read())
+        for nota in notas:
+            if nota["Modulo"]==int(nModulo) and nota["Id"]==id:
+                nota["Teorica"]=input("Teorica: ")
+                nota["Practica"]=input("Trabajos: ")
+                with open ("modulo/storage/notas.json","w") as f:
+                    notas=json.dumps(notas,indent=4)
+                    f.write(notas)
+                    f.close()#agregar funcionalidad adicional
+
+
+
+
 def aprobados():
     with open("modulo/storage/camper.json") as f:
         listaCamper =json.loads(f.read())

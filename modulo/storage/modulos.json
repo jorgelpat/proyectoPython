@@ -1,6 +1,6 @@
 [
     {
-        "codigo": "F001",
+        "codigo": 1,
         "nombre_modulo": "Fundamentos de programacion",
         "temario": [
             "lenguaje natural",
@@ -12,7 +12,7 @@
         "prioridad": "Principal"
     },
     {
-        "codigo": "F002",
+        "codigo": 2,
         "nombre_modulo": "Estructuras de datos",
         "temario": [
             "listas",
@@ -24,7 +24,7 @@
         "prioridad": "Intermedio"
     },
     {
-        "codigo": "F003",
+        "codigo": 3,
         "nombre_modulo": "Programación orientada a objetos",
         "temario": [
             "clases y objetos",
@@ -36,7 +36,7 @@
         "prioridad": "Intermedio"
     },
     {
-        "codigo": "F004",
+        "codigo": 4,
         "nombre_modulo": "Desarrollo web",
         "temario": [
             "HTML",
@@ -48,7 +48,7 @@
         "prioridad": "Principal"
     },
     {
-        "codigo": "F005",
+        "codigo": 5,
         "nombre_modulo": "Base de datos",
         "temario": [
             "modelado de datos",
@@ -60,7 +60,7 @@
         "prioridad": "Intermedio"
     },
     {
-        "codigo": "F006",
+        "codigo": 6,
         "nombre_modulo": "Inteligencia artificial",
         "temario": [
             "aprendizaje automático",
