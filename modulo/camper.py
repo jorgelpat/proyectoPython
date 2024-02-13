@@ -140,6 +140,14 @@ def actualizarEstado():
         campers=json.dumps(campers,indent=4)
         f.write(campers)
         f.close()
+    while True:
+        print(f"{camper.get("Nombre")} {camper.get("Apellido")} ha pasado a inscrito\n")
+        print("Presione cualquier tecla seguido de 'ENTER' para salir\n")
+        opc=input()
+        if opc.isnumeric():
+            break
+        else:
+            break
     system("clear")
 
 
@@ -156,14 +164,14 @@ def buscar():
     for datos in data:
         if id == datos["Id"]:
             print(f"""
-Nombre: {datos.get('Nombre')}      
-Apellido: {datos.get('Apellido')}
-Edad: {datos.get('Edad')}
-Id: {datos.get('Id')}
-Direccion: {datos.get('Direccion')}
-Acudiente: {datos.get('Acudiente')}
-Teléfono: {datos.get('Telefono')}
-Estado: {datos.get('Estado')}                          
+    Nombre: {datos.get('Nombre')}      
+    Apellido: {datos.get('Apellido')}
+    Edad: {datos.get('Edad')}
+    Id: {datos.get('Id')}
+    Direccion: {datos.get('Direccion')}
+    Acudiente: {datos.get('Acudiente')}
+    Teléfono: {datos.get('Telefono')}
+    Estado: {datos.get('Estado')}                          
                 """)
     bandera=True
     while(bandera):
@@ -171,10 +179,13 @@ Estado: {datos.get('Estado')}
         print("\t2. Salir")
         opc=input()
         if opc.isnumeric():
-            bandera=False
-        if opc == 1:
-            buscar()
-    system("clear")
+            if opc == "1":
+                buscar()
+            elif opc =="2":
+                bandera=False
+                system("clear")
+            else:
+                system("clear")
     return "Camper cargado"
 
 def eliminar():
