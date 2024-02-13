@@ -1,6 +1,7 @@
 import json
 from os import system
 import modulo.menu as menu
+import modulo.validate as validate
 from .data import camper, estados, trainer, horarios
 
 def guardar():
@@ -64,12 +65,15 @@ Nombre: {trainer.get("Nombre")}
 Apellido: {trainer.get("Apellido")}
 Id: {trainer.get("Id")}  
                       """)
+            else:
+                print(f"No hay nigun trainer asociado al Id {id}")
     bandera=True
     while (bandera):
         print("\t1. Seguir Buscando")
         print("\t2. Salir")
         opc=int(input())
         if opc == 1:
+            system("clear")
             buscar()
         elif opc==2:
             bandera=False
@@ -99,15 +103,23 @@ Id: {trainer.get("Id")}
 
 
 def menuTrainer():
-    print("\t1. Crear trainer")
-    print("\t2. Editar trainer")
-    print("\t3. Buscar trainer")
-    opc = int(input())
-    if opc==1:
+    while True:
+        print("*****Menu Trainer*****")
+        print("\t1. Crear trainer")
+        print("\t2. Editar trainer")
+        print("\t3. Buscar trainer")
+        opc = input()
+        if opc.isnumeric():
+            break
+    if opc=="1":
         guardar()
-    elif opc==2:
+    elif opc=="2":
         actualizar()
-    elif opc==3:
+    elif opc=="3":
+        system("clear")
         buscar()
+    else:
+        system("clear")
+        menuTrainer()
 
 
