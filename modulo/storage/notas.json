@@ -5,5 +5,19 @@
         "Teorica": "90",
         "Practica": "80",
         "Trabajos": "60"
+    },
+    {
+        "Modulo": 1,
+        "Id": "155",
+        "Teorica": "90",
+        "Practica": "80",
+        "Trabajos": "70"
+    },
+    {
+        "Modulo": 1,
+        "Id": "119",
+        "Teorica": "60",
+        "Practica": "60",
+        "Trabajos": "60"
     }
 ]

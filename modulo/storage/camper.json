@@ -7,7 +7,7 @@
         "Direccion": "Calle de Dios",
         "Acudiente": null,
         "Telefono": "3216549780",
-        "Estado": "Preseleccion",
+        "Estado": "Aprobado",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -19,7 +19,7 @@
         "Direccion": "Los Angeles ",
         "Acudiente": "jorg",
         "Telefono": "3213216546",
-        "Estado": "Preseleccion",
+        "Estado": "Filtrado",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -31,7 +31,7 @@
         "Direccion": "Melbourne Victoria",
         "Acudiente": null,
         "Telefono": "3102864855",
-        "Estado": "Inscrito",
+        "Estado": "Aprobado",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -55,7 +55,7 @@
         "Direccion": "coorado",
         "Acudiente": null,
         "Telefono": "3214566892",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -67,7 +67,7 @@
         "Direccion": "Wallaby Street 42 Sidney",
         "Acudiente": null,
         "Telefono": "32145698",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -79,7 +79,7 @@
         "Direccion": "asdfads",
         "Acudiente": null,
         "Telefono": "321654",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -103,7 +103,7 @@
         "Direccion": "adfa3ds2f16ad5f13as2",
         "Acudiente": null,
         "Telefono": "3213215132",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -115,7 +115,7 @@
         "Direccion": "4 Privet Drive, Bajo la escalera",
         "Acudiente": null,
         "Telefono": "31125254621",
-        "Estado": "Preseleccion",
+        "Estado": "Inscrito",
         "Riesgo": "Normal",
         "Warning": 0
     },

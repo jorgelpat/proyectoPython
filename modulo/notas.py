@@ -273,15 +273,28 @@ def bajoRiesgo():
 
 
 def lista_aprob_camper_trainer_modulo():
-    with open("modulo/storage/camper.json") as f:
-        campers=json.loads(f.read())
-    with open("modulo/storage/horario1.json") as f1:
-        horario1=json.loads(f1.read())
-    with open("modulo/storage/horario2.json") as f2:
-        horario2=json.loads(f2.read())
-    with open("modulo/storage/horario3.json") as f3:
-        horario3=json.loads(f3.read())
-    with open("modulo/storage/horario4.json") as f4:
-        horario4=json.loads(f4.read())
-    with open("modulo/storage/notas.json") as f5:
-        notas=json.loads(f5.read())
+    with open("modulo/storage/notas.json") as f:
+        notas=json.loads(f.read())
+        contador=0
+        for nota in notas:
+            if ((int(nota["Practica"])*0.6)+(int(nota["Teorica"])*0.3)+((int(nota["Trabajos"]))*0.1))>=60:
+                contador = contador+1
+            else:
+                print("Nadie ha perdido")
+    print(contador)
+    n=input(" ")
+
+
+
+    # with open("modulo/storage/camper.json") as f:
+    #     campers=json.loads(f.read())
+    # with open("modulo/storage/horario1.json") as f1:
+    #     horario1=json.loads(f1.read())
+    # with open("modulo/storage/horario2.json") as f2:
+    #     horario2=json.loads(f2.read())
+    # with open("modulo/storage/horario3.json") as f3:
+    #     horario3=json.loads(f3.read())
+    # with open("modulo/storage/horario4.json") as f4:
+    #     horario4=json.loads(f4.read())
+    # with open("modulo/storage/notas.json") as f5:
+    #     notas=json.loads(f5.read())

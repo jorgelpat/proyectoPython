@@ -19,7 +19,7 @@ def menuPrincipal():
         print("\t4. Lista de Asignados a Rutas")
         print("\t5. Asignacion Horaria")
         print("\t6. Listas de Campers")
-        #print("\t7. Rutas")
+        print("\t7. Numero de Campers que perdieron y aprobaron")
 
         opc = input()
         system("clear")
@@ -278,8 +278,8 @@ def menuPrincipal():
                     mCamper.inscritos()
                 case "4":
                     mTrainer.listaTrainers()                   
-        # case "7": 
-        #     mRuta.enrutamiento()
+        case "7": 
+            mNotas.lista_aprob_camper_trainer_modulo()
         case _: 
             valid.noValid(opc)
 

@@ -141,14 +141,13 @@ def actualizarEstado():
         f.write(campers)
         f.close()
     while True:
-        print(f"{camper.get("Nombre")} {camper.get("Apellido")} ha pasado a inscrito\n")
+        if camper["Id"]==id:
+            print(f"{camper.get("Nombre")} {camper.get("Apellido")} ha pasado a inscrito\n")
         print("Presione cualquier tecla seguido de 'ENTER' para salir\n")
         opc=input()
-        if opc.isnumeric():
-            break
-        else:
-            break
+        break
     system("clear")
+    return "Camper Inscrito"
 
 
 
