@@ -56,9 +56,15 @@ def menuPrincipal():
                 opc=input()
                 if opc.isnumeric():
                     bandera=False
-            if opc=="1": mRuta.lista_ruta_netcore()
-            elif opc=="2": mRuta.lista_ruta_nodejs()
-            elif opc=="3": mRuta.lista_ruta_java()
+            if opc=="1": 
+                system("clear")
+                mRuta.lista_ruta_netcore()
+            elif opc=="2": 
+                system("clear")
+                mRuta.lista_ruta_nodejs()
+            elif opc=="3": 
+                system("clear")
+                mRuta.lista_ruta_java()
             else: valid.noValid()
         case "5":
             system("clear")
