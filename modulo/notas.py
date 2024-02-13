@@ -148,8 +148,11 @@ ______________________________
 
 
 def actNotas():
+    system("clear")
     id = input("Documento de camper:\n")
     nModulo = input("Numero de módulo")
+    with open("modulo/storage/camper.json") as f1:
+        campers=json.loads(f1.read())
     with open("modulo/storage/notas.json") as f:
         notas=json.loads(f.read())
         for nota in notas:
@@ -160,6 +163,18 @@ def actNotas():
                     notas=json.dumps(notas,indent=4)
                     f.write(notas)
                     f.close()#agregar funcionalidad adicional
+                for camper in campers:
+                    if id==camper["Id"]:
+                        print(f"{camper.get('Nombre')} {camper.get('Apellido')}")
+                        print(f"""
+                                Modulo: {nota.get('Modulo')}
+                                Id: {nota.get('Id')}
+                                Teorica: {nota.get('Teorica')}
+                                Practica: {nota.get('Practica')}
+                                Trabajos: {nota.get('Trabajos')}
+                              """)
+            else:
+                print(f"No hay ninguna nota asociada al modulo {nModulo} con el Id {id}")            
 
 
 
