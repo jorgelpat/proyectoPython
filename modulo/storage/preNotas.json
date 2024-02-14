@@ -33,5 +33,15 @@
         "Id": "119",
         "Teorica": "90",
         "Practica": "82"
+    },
+    {
+        "Id": "007",
+        "Teorica": "75",
+        "Practica": "80"
+    },
+    {
+        "Id": "123",
+        "Teorica": "90",
+        "Practica": "60"
     }
 ]

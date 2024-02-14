@@ -273,16 +273,43 @@ def bajoRiesgo():
 
 
 def lista_aprob_camper_trainer_modulo():
+    with open("modulo/storage/horario1.json") as f1:
+        horario1=json.loads(f1.read())
+    with open("modulo/storage/horario2.json") as f2:
+        horario2=json.loads(f2.read())
+    with open("modulo/storage/horario3.json") as f3:
+        horario3=json.loads(f3.read())
+    with open("modulo/storage/horario4.json") as f4:
+        horario4=json.loads(f4.read())
     with open("modulo/storage/notas.json") as f:
         notas=json.loads(f.read())
         contador=0
         for nota in notas:
             if ((int(nota["Practica"])*0.6)+(int(nota["Teorica"])*0.3)+((int(nota["Trabajos"]))*0.1))>=60:
                 contador = contador+1
+                for datos1 in horario1:
+                    if nota["Id"]==datos1["Campers"]:
+                        print(f"Trainer: ........{datos1.get('Trainer')}")
+                        print(f"Camper: .........{nota.get('Id')}")
+                for datos2 in horario2:
+                    if nota["Id"]==datos2["Campers"]:
+                        print(f"Trainer: ........{datos2.get('Trainer')}")
+                        print(f"Camper: .........{nota.get('Id')}")
+                for datos3 in horario3:
+                    if nota["Id"]==datos3["Campers"]:
+                        print(f"Trainer: ........{datos3.get('Trainer')}")
+                        print(f"Camper: .........{nota.get('Id')}")
+                for datos4 in horario4:
+                    if nota["Id"]==datos4["Campers"]:
+                        print(f"Trainer: ........{datos4.get('Trainer')}")
+                        print(f"Camper: .........{nota.get('Id')}")
             else:
                 print("Nadie ha perdido")
-    print(contador)
-    n=input(" ")
+    print("Lista de numero de examenes aprobados y reprobados")
+    print(f"Cantidad de examenes aprobados: {contador}")
+
+    input("Presione 'Enter' para salir")
+    
 
 
 

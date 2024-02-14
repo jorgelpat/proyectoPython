@@ -43,7 +43,7 @@
         "Direccion": "Confidencial",
         "Acudiente": null,
         "Telefono": "9876543210",
-        "Estado": "Inscrito",
+        "Estado": "Aprobado",
         "Riesgo": "Normal",
         "Warning": 0
     },
@@ -55,9 +55,9 @@
         "Direccion": "coorado",
         "Acudiente": null,
         "Telefono": "3214566892",
-        "Estado": "Inscrito",
-        "Riesgo": "Normal",
-        "Warning": 0
+        "Estado": "Aprobado",
+        "Riesgo": "En Riesgo",
+        "Warning": 1
     },
     {
         "Nombre": "Darla",
