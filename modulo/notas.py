@@ -303,8 +303,6 @@ def lista_aprob_camper_trainer_modulo():
                     if nota["Id"]==datos4["Campers"]:
                         print(f"Trainer: ........{datos4.get('Trainer')}")
                         print(f"Camper: .........{nota.get('Id')}")
-            else:
-                print("Nadie ha perdido")
     print("Lista de numero de examenes aprobados y reprobados")
     print(f"Cantidad de examenes aprobados: {contador}")
 
